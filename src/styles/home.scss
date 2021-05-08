@@ -130,6 +130,7 @@
   min-width: 200px;
   margin-top: -200px;
   margin-left: 30px;
+  margin-right: 25px;
 }
 
 .home-download-app-title {
@@ -168,14 +169,33 @@
 }
 
 .home-guide {
-  margin: 100px 0;
+  position: relative;
+  margin: 400px 0 300px 0;
   padding: 50px var(--desktop-grid-padding);
   background-color: var(--third-background-color);
+}
+
+.home-guide-bg {
+  position: absolute;
+  top: -250px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.home-guide-bg-down {
+  position: absolute;
+  bottom: -250px;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 .home-guide-title {
   font-size: var(--very-big-font);
   font-weight: bold;
+  position: relative;
+  z-index: 1;
 }
 
 .home-guide-content {
@@ -183,12 +203,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .home-guide-item {
   font-size: var(--big-font);
   text-align: right;
   margin-bottom: 30px;
+
+  &.disable {
+    color: var(--disable-color);
+  }
 }
 
 .home-guide-item-title {
@@ -196,8 +222,83 @@
   color: var(--first-color);
   font-weight: bold;
   margin-bottom: 8px;
+
+  &.disable {
+    color: var(--disable-color);
+  }
 }
 
 .home-guide-img {
   width: 250px;
+}
+
+.home-guide-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 25px 5px;
+  background-color: var(--first-color);
+  transition: opacity ease 0.2s;
+
+  &.disable {
+    opacity: 0.2;
+  }
+}
+
+.home-questions {
+  padding: 50px var(--desktop-grid-padding);
+}
+
+.home-questions-title {
+  font-size: var(--very-big-font);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.home-questions-item-cont {
+  max-width: 650px;
+  margin: 25px auto;
+}
+
+.home-questions-item {
+  display: flex;
+  text-align: right;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  border: 1px solid var(--first-color);
+  border-radius: var(--second-radius);
+  font-size: var(--title-font);
+  cursor: pointer;
+  transition: border-radius ease 0.1s;
+
+  &.open {
+    border-radius: var(--second-radius) var(--second-radius) 0 0;
+  }
+}
+
+.home-questions-item-svg {
+  fill: var(--first-color);
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  margin-left: -12px;
+  transition: transform ease 0.2s;
+
+  &.open {
+    transform: rotate(45deg);
+  }
+}
+
+.home-questions-answer {
+  text-align: right;
+  background-color: var(--second-background-color);
+  overflow: hidden;
+  transition: height ease 0.2s;
+  border-radius: 0 0 var(--second-radius) var(--second-radius);
+  line-height: var(--first-line-height);
+}
+
+.home-questions-answer-text {
+  padding: 25px;
 }

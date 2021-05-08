@@ -13,6 +13,7 @@ import Picture from "../components/Picture"
 import AppBgSvg from "../../media/svgs/AppBgSvg"
 import LogoTypeSvg from "../../media/svgs/LogoTypeSvg"
 import GuideBgSvg from "../../media/svgs/GuideBgSvg"
+import FaqItem from "../components/FaqItem"
 
 function HomePage()
 {
@@ -98,7 +99,8 @@ function HomePage()
             </div>
 
             <div className="home-guide">
-                {/*<GuideBgSvg/>*/}
+                <GuideBgSvg className="home-guide-bg"/>
+                <GuideBgSvg className="home-guide-bg-down"/>
                 <div className="home-guide-title">چطور از بومینو استفاده کنم؟</div>
                 <div className="home-guide-content">
                     <div>
@@ -106,24 +108,31 @@ function HomePage()
                             <div className="home-guide-item-title">1. دانلود</div>
                             <div>ابتدا اپلیکیشن را دانلود<br/>و نصب کنید.</div>
                         </div>
-                        <div className="home-guide-item">
-                            <div className="home-guide-item-title">2. ساخت اکانت</div>
+                        <div className="home-guide-item disable">
+                            <div className="home-guide-item-title disable">2. ساخت اکانت</div>
                             <div>ثبت‌نام کنید و فرزند یا<br/>فرزندانتان را تعریف کنید.</div>
                         </div>
-                        <div className="home-guide-item">
-                            <div className="home-guide-item-title">3. فعال‌کردن اینترنت کودک</div>
+                        <div className="home-guide-item disable">
+                            <div className="home-guide-item-title disable">3. فعال‌کردن اینترنت کودک</div>
                             <div>اینترنت را فعال کنید و<br/>با خیال آسوده<br/>به فرزندتان بسپارید.</div>
                         </div>
                     </div>
                     <div>
-                        <div/>
-                        <div/>
-                        <div/>
-                        <div/>
-                        <div/>
+                        <div className="home-guide-dot"/>
+                        <div className="home-guide-dot disable"/>
+                        <div className="home-guide-dot disable"/>
+                        <div className="home-guide-dot disable"/>
+                        <div className="home-guide-dot disable"/>
                     </div>
                     <PhoneSvg className="home-guide-img"/>
                 </div>
+            </div>
+
+            <div className="home-questions">
+                <div className="home-questions-title">سوالات متداول</div>
+                <FaqItem title="آیا استفاده از بومینو برای من هزینه دارد؟ آیا استفاده از بومینو برای من هزینه دارد؟ آیا استفاده از بومینو برای من هزینه دارد؟" answer="بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند "/>
+                <FaqItem title="آیا استفاده از بومینو برای من هزینه دارد؟" answer="بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند"/>
+                <FaqItem title="آیا استفاده از بومینو برای من هزینه دارد؟" answer="بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند"/>
             </div>
         </>
     )
