@@ -1,0 +1,44 @@
+@import "mixin";
+
+.header {
+  height: var(--header-height);
+  padding: 0 var(--desktop-grid-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.header-right {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-right-logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  margin-bottom: -10px;
+  margin-left: 10px;
+}
+
+.header-right-btn {
+  padding: 5px 10px;
+  margin-left: 20px;
+  border-radius: var(--first-radius);
+  cursor: pointer;
+}
+
+.header-left {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-left-download {
+  @include first-btn;
+}

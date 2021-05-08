@@ -2,3 +2,12 @@
   text-align: justify;
   white-space: pre-line;
 }
+
+@mixin first-btn {
+  padding: 5px 15px;
+  background-color: var(--first-color);
+  color: var(--solid-light);
+  border-radius: var(--first-radius);
+  cursor: pointer;
+  box-shadow: var(--first-shadow);
+}
