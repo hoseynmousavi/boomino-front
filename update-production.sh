@@ -10,6 +10,9 @@ sed -i "s~SECOND_RADIUS~$REACT_APP_SECOND_RADIUS~g" build/index.html &&
 sed -i "s~FIRST_SHADOW~$REACT_APP_FIRST_SHADOW~g" build/index.html &&
 sed -i "s~HEADER_HEIGHT~$REACT_APP_HEADER_HEIGHT~g" build/index.html &&
 sed -i "s~DESKTOP_GRID_PADDING~$REACT_APP_DESKTOP_GRID_PADDING~g" build/index.html &&
+sed -i "s~HEADER_GRID_PADDING~$REACT_APP_HEADER_GRID_PADDING~g" build/index.html &&
+sed -i "s~FIRST_LINE_HEIGHT~$REACT_APP_FIRST_LINE_HEIGHT~g" build/index.html &&
+sed -i "s~HEADER_Z_INDEX~$REACT_APP_HEADER_Z_INDEX~g" build/index.html &&
 sed -i "s~FIRST_COLOR~$REACT_APP_FIRST_COLOR~g" build/index.html &&
 sed -i "s~SECOND_COLOR~$REACT_APP_SECOND_COLOR~g" build/index.html &&
 sed -i "s~THIRD_COLOR~$REACT_APP_THIRD_COLOR~g" build/index.html &&
@@ -23,6 +26,7 @@ sed -i "s~TEXT_COLOR~$REACT_APP_TEXT_COLOR~g" build/index.html &&
 sed -i "s~BORDER_COLOR~$REACT_APP_BORDER_COLOR~g" build/index.html &&
 sed -i "s~SECOND_BORDER_COLOR~$REACT_APP_SECOND_BORDER_COLOR~g" build/index.html &&
 sed -i "s~MATERIAL_COLOR~$REACT_APP_MATERIAL_COLOR~g" build/index.html &&
+sed -i "s~DISABLE_COLOR~$REACT_APP_DISABLE_COLOR~g" build/index.html &&
 sed -i "s~VERY_SMALL_FONT~$REACT_APP_VERY_SMALL_FONT~g" build/index.html &&
 sed -i "s~SMALL_FONT~$REACT_APP_SMALL_FONT~g" build/index.html &&
 sed -i "s~REGULAR_FONT~$REACT_APP_REGULAR_FONT~g" build/index.html &&

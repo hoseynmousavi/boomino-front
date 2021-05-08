@@ -3,6 +3,7 @@
 @import "material";
 @import "my-loader";
 @import "header";
+@import "home";
 
 @font-face {
   font-family: "my-font";
@@ -23,6 +24,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+
+  @media not all and (min-resolution: .001dpcm) {
+    letter-spacing: -1px;
+  }
 }
 
 button, a, input, textarea, h4, h3, h2, h1, select, video, track {
@@ -32,6 +37,10 @@ button, a, input, textarea, h4, h3, h2, h1, select, video, track {
   font-size: var(--regular-font);
   font-family: "my-font", serif;
   border: none;
+
+  @media not all and (min-resolution: .001dpcm) {
+    letter-spacing: -1px;
+  }
 
   &:focus {
     outline: none;

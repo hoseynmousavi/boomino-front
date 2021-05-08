@@ -4,10 +4,11 @@
 }
 
 @mixin first-btn {
-  padding: 5px 15px;
+  padding: 8px 20px;
   background-color: var(--first-color);
   color: var(--solid-light);
   border-radius: var(--first-radius);
   cursor: pointer;
   box-shadow: var(--first-shadow);
+  font-weight: bold;
 }
