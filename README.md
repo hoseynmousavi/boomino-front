@@ -1,1 +1,1 @@
-# boomino-front
+So it's a new good project
