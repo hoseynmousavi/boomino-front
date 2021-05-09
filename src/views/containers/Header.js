@@ -11,7 +11,13 @@ function Header()
     return (
         <header className={`header ${scrollY ? "down" : ""}`} style={{height}}>
             <div className="header-right">
-                <LogoSvg className="header-right-logo"/>
+                <div className="header-right-logo-cont">
+                    <LogoSvg className="header-right-logo"/>
+                    <div className={`header-right-logo-test ${scrollY ? "hide" : ""}`}>
+                        <div className="header-right-logo-test-triangle"/>
+                        <div className="header-right-logo-test-text">نسخه آزمایشی</div>
+                    </div>
+                </div>
                 <Material className="header-right-btn">مرورگر دورینو</Material>
                 <Material className="header-right-btn">بلاگ</Material>
                 <Material className="header-right-btn">سوالات متداول</Material>
