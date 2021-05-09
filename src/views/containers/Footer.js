@@ -42,7 +42,7 @@ function Footer()
                 <div className="footer-bottom-left">
                     <HamrahWhiteSvg className="footer-bottom-left-svg"/>
                     <div>
-                        خدمتی از همراه اول
+                        قدرت گرفته از همراه اول
                     </div>
                 </div>
             </div>
