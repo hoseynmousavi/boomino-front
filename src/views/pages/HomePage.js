@@ -28,10 +28,10 @@ import Header from "../containers/Header"
 function HomePage()
 {
     return (
-        <>
+        <div className="home">
             <div className="home-first-section">
                 <div className="home-header-cont">
-                    <Header backgroundColor="var(--second-background-color)"/>
+                    <Header zIndex="calc(var(--header-z-index) + 1)" backgroundColor="var(--second-background-color)"/>
                 </div>
                 <WindSvg className="home-first-wind first"/>
                 <LandingDotsSvg className="home-first-dots"/>
@@ -66,130 +66,124 @@ function HomePage()
                 </div>
             </div>
 
-            <div className="home-header-second-cont">
-                <div className="home-header-cont">
-                    <Header backgroundColor="var(--background-color)"/>
-                </div>
-
-                <div className="home-second-section">
-                    <WindSvg className="home-second-wind"/>
-                    <WindSvg className="home-second-wind-right"/>
-                    <CircleSvg className="home-second-circle"/>
-                    <LandingCurve2Svg className="home-second-curve"/>
-                    <img loading="lazy" className="home-first-first-design" src={secondDesign} alt=""/>
-                    <div className="home-second-left">
-                        <div className="home-second-title">بچه‌ها چقدر تو گوشی هستن و چیا می‌بینن؟</div>
-                        <div className="home-second-desc">
-                            بچه‌های امروزی بیشتر از هر زمان دیگه و از سنین پایین‌تری، وقتشون رو با اینترنت می‌گذرونن و خیلی راحت به هر محتوایی که مناسب سن‌شون نیست، دسترسی دارن.
-                        </div>
-                        <div className="home-second-more">بیشتر بدونیم</div>
-                        <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
+            <div className="home-second-section">
+                <WindSvg className="home-second-wind"/>
+                <WindSvg className="home-second-wind-right"/>
+                <CircleSvg className="home-second-circle"/>
+                <LandingCurve2Svg className="home-second-curve"/>
+                <img loading="lazy" className="home-first-first-design" src={secondDesign} alt=""/>
+                <div className="home-second-left">
+                    <div className="home-second-title">بچه‌ها چقدر تو گوشی هستن و چیا می‌بینن؟</div>
+                    <div className="home-second-desc">
+                        بچه‌های امروزی بیشتر از هر زمان دیگه و از سنین پایین‌تری، وقتشون رو با اینترنت می‌گذرونن و خیلی راحت به هر محتوایی که مناسب سن‌شون نیست، دسترسی دارن.
                     </div>
-                </div>
-
-                <div className="home-second-section">
-                    <WindSvg className="home-second-wind center"/>
-                    <LandingDots2Svg className="home-second-dots"/>
-                    <div className="home-second-left">
-                        <div className="home-second-title">بومینو خیال مادرا و پدرا رو راحت‌تر می‌کنه</div>
-                        <div className="home-third-content first">
-                            <CheckSvg className="home-third-content-svg"/>
-                            <div>با بومینو شما می‌تونید زمان استفاده از اینترنت بچه‌تون رو مدیریت کنید</div>
-                        </div>
-                        <div className="home-third-content">
-                            <CheckSvg className="home-third-content-svg"/>
-                            <div>با انتخاب ردهٔ سنی محتوای مناسب در اختیارش بگذارید</div>
-                        </div>
-                        <div className="home-third-content">
-                            <CheckSvg className="home-third-content-svg"/>
-                            <div>هر موقع که بخواید می‌تونید یه گزارش از فعالیت بچه‌تون داشته باشید</div>
-                        </div>
-                        <div className="home-second-more">بیشتر بدونیم</div>
-                        <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
-                    </div>
-                    <img loading="lazy" className="home-first-first-design" src={thirdDesign} alt=""/>
-                </div>
-
-                <div className="home-second-section">
-                    <WindSvg className="home-second-wind rotated"/>
-                    <LandingCurveSvg className="home-second-curve"/>
-                    <img loading="lazy" className="home-first-first-design" src={forthDesign} alt=""/>
-                    <div className="home-second-left">
-                        <div className="home-second-title">کلی محتوای جذاب توی بومینو پیدا کنید</div>
-                        <div className="home-second-desc">
-                            توی بومینو انواع بازی، کارتون، فیلم و ابزار آموزشی و سرگرمی پیدا می‌شه
-                            بومینو بهتون می‌گه چه محتوایی مناسب با ردهٔ سنی بچه‌تونه
-                            پیشنهادات بومینو خیالتون رو از نوع تاثیرگذاری محتوا راحت‌تر می‌کنه
-                        </div>
-                        <div className="home-second-more">بیشتر بدونیم</div>
-                        <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
-                    </div>
-                </div>
-
-                <div className="home-download-app">
-                    <AppBgSvg className="home-download-app-bg"/>
-                    <PhoneSvg className="home-download-app-svg"/>
-                    <div className="home-download-app-content">
-                        <div className="home-download-app-title">همین حالا اپلیکیشن بومینو رو نصب کنید</div>
-                        <div className="home-download-app-desc">استفاده از بومینو کاملا رایگانه</div>
-                        <div className="home-download-app-store">
-                            <PlayStoreSvg className="home-download-app-store-svg"/>
-                            <AppStoreSvg className="home-download-app-store-svg"/>
-                            <Picture className="home-download-app-store-svg last-child" src={bazaar} alt="" srcSet={null}/>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="home-guide">
-                    <GuideBgSvg className="home-guide-bg"/>
-                    <GuideBgSvg className="home-guide-bg-down"/>
-                    <TriangleSvg className="home-download-triangle"/>
-                    <div className="home-guide-title">چطور از بومینو استفاده کنم؟</div>
-                    <div className="home-guide-content">
-                        <div className="home-guide-content-text">
-                            <div className="home-guide-item">
-                                <div className="home-guide-item-title">1. دانلود</div>
-                                <div>ابتدا اپلیکیشن را دانلود<br/>و نصب کنید.</div>
-                            </div>
-                            <div className="home-guide-item disable">
-                                <div className="home-guide-item-title disable">2. ساخت اکانت</div>
-                                <div>ثبت‌نام کنید و فرزند یا<br/>فرزندانتان را تعریف کنید.</div>
-                            </div>
-                            <div className="home-guide-item disable">
-                                <div className="home-guide-item-title disable">3. فعال‌کردن اینترنت کودک</div>
-                                <div>اینترنت را فعال کنید و<br/>با خیال آسوده<br/>به فرزندتان بسپارید.</div>
-                            </div>
-                        </div>
-                        <div className="home-guide-dot-cont">
-                            <div className="home-guide-dot"/>
-                            <div className="home-guide-dot disable"/>
-                            <div className="home-guide-dot disable"/>
-                            <div className="home-guide-dot disable"/>
-                            <div className="home-guide-dot disable"/>
-                        </div>
-                        <PhoneSvg className="home-guide-img"/>
-                    </div>
-                </div>
-
-                <div className="home-questions">
-                    <PolygonSvg className="home-questions-polygon"/>
-                    <div className="home-questions-title">سوالات متداول</div>
-                    <FaqItem title="آیا استفاده از بومینو برای ما هزینه داره؟"
-                             answer="نه."
-                    />
-                    <FaqItem title="آیا بومینو روی همهٔ گوشی‌ها قابل استفاده است؟"
-                             answer="در حال حاضر بومینو روی همهٔ گوشی‌ها و تبلت‌های اندرویدی قابل استفاده است. کاربران iOS می‌تونن از نسخهٔ وب و یا از مسیر کدهای USSD اقدام کنن. البته در حال حاضر فقط می‌شه دسترسی اینترنت سیم‌کارت‌های همراه اول رو کنترل و محدود کرد."
-                    />
-                    <FaqItem title="آیا برای استفاده از بومینو، لازمه بچه‌مون گوشیِ جُدا داشته باشه؟"
-                             answer="نه؛ لازم نیست حتما گوشی و سیم‌کارت جُدا داشته باشه. شما می‌تونید گوشیِ خودتون رو در حالت تحویل به فرزند بذارید و به بچه‌تون تحویل بدید."
-                    />
-                    <FaqItem title="آیا می‌شه مصرف اینترنت wifi و adsl و ... رو هم کنترل کرد؟"
-                             answer="در حال حاضر فقط اینترنتی که با سیم‌کارت همراه اول در اختیار بچه‌تون گذاشتید رو می‌تونید کنترل کنید. به زودی در نسخه‌های بعدی کنترل بقیهٔ اینترنت‌ها هم ممکن می‌شه."
-                    />
+                    <div className="home-second-more">بیشتر بدونیم</div>
                     <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
                 </div>
             </div>
-        </>
+
+            <div className="home-second-section">
+                <WindSvg className="home-second-wind center"/>
+                <LandingDots2Svg className="home-second-dots"/>
+                <div className="home-second-left">
+                    <div className="home-second-title">بومینو خیال مادرا و پدرا رو راحت‌تر می‌کنه</div>
+                    <div className="home-third-content first">
+                        <CheckSvg className="home-third-content-svg"/>
+                        <div>با بومینو شما می‌تونید زمان استفاده از اینترنت بچه‌تون رو مدیریت کنید</div>
+                    </div>
+                    <div className="home-third-content">
+                        <CheckSvg className="home-third-content-svg"/>
+                        <div>با انتخاب ردهٔ سنی محتوای مناسب در اختیارش بگذارید</div>
+                    </div>
+                    <div className="home-third-content">
+                        <CheckSvg className="home-third-content-svg"/>
+                        <div>هر موقع که بخواید می‌تونید یه گزارش از فعالیت بچه‌تون داشته باشید</div>
+                    </div>
+                    <div className="home-second-more">بیشتر بدونیم</div>
+                    <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
+                </div>
+                <img loading="lazy" className="home-first-first-design" src={thirdDesign} alt=""/>
+            </div>
+
+            <div className="home-second-section">
+                <WindSvg className="home-second-wind rotated"/>
+                <LandingCurveSvg className="home-second-curve"/>
+                <img loading="lazy" className="home-first-first-design" src={forthDesign} alt=""/>
+                <div className="home-second-left">
+                    <div className="home-second-title">کلی محتوای جذاب توی بومینو پیدا کنید</div>
+                    <div className="home-second-desc">
+                        توی بومینو انواع بازی، کارتون، فیلم و ابزار آموزشی و سرگرمی پیدا می‌شه
+                        بومینو بهتون می‌گه چه محتوایی مناسب با ردهٔ سنی بچه‌تونه
+                        پیشنهادات بومینو خیالتون رو از نوع تاثیرگذاری محتوا راحت‌تر می‌کنه
+                    </div>
+                    <div className="home-second-more">بیشتر بدونیم</div>
+                    <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
+                </div>
+            </div>
+
+            <div className="home-download-app">
+                <AppBgSvg className="home-download-app-bg"/>
+                <PhoneSvg className="home-download-app-svg"/>
+                <div className="home-download-app-content">
+                    <div className="home-download-app-title">همین حالا اپلیکیشن بومینو رو نصب کنید</div>
+                    <div className="home-download-app-desc">استفاده از بومینو کاملا رایگانه</div>
+                    <div className="home-download-app-store">
+                        <PlayStoreSvg className="home-download-app-store-svg"/>
+                        <AppStoreSvg className="home-download-app-store-svg"/>
+                        <Picture className="home-download-app-store-svg last-child" src={bazaar} alt="" srcSet={null}/>
+                    </div>
+                </div>
+            </div>
+
+            <div className="home-guide">
+                <GuideBgSvg className="home-guide-bg"/>
+                <GuideBgSvg className="home-guide-bg-down"/>
+                <TriangleSvg className="home-download-triangle"/>
+                <div className="home-guide-title">چطور از بومینو استفاده کنم؟</div>
+                <div className="home-guide-content">
+                    <div className="home-guide-content-text">
+                        <div className="home-guide-item">
+                            <div className="home-guide-item-title">1. دانلود</div>
+                            <div>ابتدا اپلیکیشن را دانلود<br/>و نصب کنید.</div>
+                        </div>
+                        <div className="home-guide-item disable">
+                            <div className="home-guide-item-title disable">2. ساخت اکانت</div>
+                            <div>ثبت‌نام کنید و فرزند یا<br/>فرزندانتان را تعریف کنید.</div>
+                        </div>
+                        <div className="home-guide-item disable">
+                            <div className="home-guide-item-title disable">3. فعال‌کردن اینترنت کودک</div>
+                            <div>اینترنت را فعال کنید و<br/>با خیال آسوده<br/>به فرزندتان بسپارید.</div>
+                        </div>
+                    </div>
+                    <div className="home-guide-dot-cont">
+                        <div className="home-guide-dot"/>
+                        <div className="home-guide-dot disable"/>
+                        <div className="home-guide-dot disable"/>
+                        <div className="home-guide-dot disable"/>
+                        <div className="home-guide-dot disable"/>
+                    </div>
+                    <PhoneSvg className="home-guide-img"/>
+                </div>
+            </div>
+
+            <div className="home-questions">
+                <PolygonSvg className="home-questions-polygon"/>
+                <div className="home-questions-title">سوالات متداول</div>
+                <FaqItem title="آیا استفاده از بومینو برای ما هزینه داره؟"
+                         answer="نه."
+                />
+                <FaqItem title="آیا بومینو روی همهٔ گوشی‌ها قابل استفاده است؟"
+                         answer="در حال حاضر بومینو روی همهٔ گوشی‌ها و تبلت‌های اندرویدی قابل استفاده است. کاربران iOS می‌تونن از نسخهٔ وب و یا از مسیر کدهای USSD اقدام کنن. البته در حال حاضر فقط می‌شه دسترسی اینترنت سیم‌کارت‌های همراه اول رو کنترل و محدود کرد."
+                />
+                <FaqItem title="آیا برای استفاده از بومینو، لازمه بچه‌مون گوشیِ جُدا داشته باشه؟"
+                         answer="نه؛ لازم نیست حتما گوشی و سیم‌کارت جُدا داشته باشه. شما می‌تونید گوشیِ خودتون رو در حالت تحویل به فرزند بذارید و به بچه‌تون تحویل بدید."
+                />
+                <FaqItem title="آیا می‌شه مصرف اینترنت wifi و adsl و ... رو هم کنترل کرد؟"
+                         answer="در حال حاضر فقط اینترنتی که با سیم‌کارت همراه اول در اختیار بچه‌تون گذاشتید رو می‌تونید کنترل کنید. به زودی در نسخه‌های بعدی کنترل بقیهٔ اینترنت‌ها هم ممکن می‌شه."
+                />
+                <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
+            </div>
+        </div>
     )
 }
 

@@ -1,5 +1,11 @@
 @import "mixin";
 
+.home {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
 .home-first-section {
   position: relative;
   display: flex;
@@ -59,12 +65,6 @@
     right: -40px;
     bottom: 150px;
   }
-}
-
-.home-header-second-cont {
-  position: relative;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 .home-header-cont {
@@ -530,7 +530,7 @@
 
 .home-guide {
   position: relative;
-  margin: 400px 0 300px 0;
+  margin: 35vw 0;
   padding: 50px var(--desktop-grid-padding);
   background-color: var(--third-background-color);
 

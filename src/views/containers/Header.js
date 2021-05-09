@@ -5,12 +5,12 @@ import HamburgerSvg from "../../media/svgs/HamburgerSvg"
 
 function Header(props)
 {
-    const {backgroundColor} = props
+    const {backgroundColor = "var(--background-color)", zIndex = "var(--header-z-index)"} = props
     const scrollY = ScrollY()
     const defaultHeight = +(process.env.REACT_APP_HEADER_HEIGHT.replace("px", ""))
     const height = defaultHeight - (scrollY / 2) >= defaultHeight - 20 ? defaultHeight - (scrollY / 2) : defaultHeight - 20
     return (
-        <header className={`header ${scrollY > 0 ? "down" : ""}`} style={{backgroundColor, height}}>
+        <header className={`header ${scrollY > 0 ? "down" : ""}`} style={{backgroundColor, zIndex, height}}>
             <div className="header-right">
                 <div className="header-right-logo-cont">
                     <LogoSvg className="header-right-logo" style={{transform: `rotate(${scrollY / 2}deg)`}}/>
