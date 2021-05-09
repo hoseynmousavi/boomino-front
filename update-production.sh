@@ -8,6 +8,7 @@ sed -i "s~PRECONNECT~$REACT_APP_REST_URL~g" build/index.html &&
 sed -i "s~FIRST_RADIUS~$REACT_APP_FIRST_RADIUS~g" build/index.html &&
 sed -i "s~SECOND_RADIUS~$REACT_APP_SECOND_RADIUS~g" build/index.html &&
 sed -i "s~FIRST_SHADOW~$REACT_APP_FIRST_SHADOW~g" build/index.html &&
+sed -i "s~SECOND_SHADOW~$REACT_APP_SECOND_SHADOW~g" build/index.html &&
 sed -i "s~HEADER_HEIGHT~$REACT_APP_HEADER_HEIGHT~g" build/index.html &&
 sed -i "s~DESKTOP_GRID_PADDING~$REACT_APP_DESKTOP_GRID_PADDING~g" build/index.html &&
 sed -i "s~TABLET_GRID_PADDING~$REACT_APP_TABLET_GRID_PADDING~g" build/index.html &&
