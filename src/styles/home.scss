@@ -2,20 +2,19 @@
 
 .home-first-section {
   position: relative;
-  margin-top: var(--header-height);
   display: flex;
-  padding: 50px var(--desktop-grid-padding);
+  padding: calc(var(--header-height) + 50px) var(--desktop-grid-padding) 50px var(--desktop-grid-padding);
   align-items: center;
   justify-content: space-between;
   text-align: right;
   background-color: var(--second-background-color);
 
   @media screen and (max-width: 1000px) {
-    padding: 50px var(--tablet-grid-padding);
+    padding: calc(var(--header-height) + 50px) var(--tablet-grid-padding) 50px var(--tablet-grid-padding);
   }
 
   @media screen and (max-width: 480px) {
-    padding: 5px var(--mobile-grid-padding) 50px var(--mobile-grid-padding);
+    padding: calc(var(--header-height) + 5px) var(--mobile-grid-padding) 50px var(--mobile-grid-padding);
     flex-wrap: wrap;
   }
 }
@@ -35,6 +34,18 @@
     width: 10vw;
     top: 48%
   }
+
+  &.first {
+    top: 25%;
+
+    @media screen and (max-width: 1000px) {
+      top: 30%;
+    }
+
+    @media screen and (max-width: 480px) {
+      top: 55%
+    }
+  }
 }
 
 .home-first-dots {
@@ -48,6 +59,22 @@
     right: -45px;
     bottom: 150px;
   }
+}
+
+.home-header-second-cont {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.home-header-cont {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  clip: rect(auto, auto, auto, auto);
 }
 
 .home-second-wind {
@@ -181,6 +208,7 @@
 .home-first-first-design {
   width: calc(100% - 440px - 10%);
   max-width: 500px;
+  aspect-ratio: 1 / 1;
 
   @media screen and (max-width: 480px) {
     width: 72%;

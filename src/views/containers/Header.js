@@ -3,17 +3,18 @@ import ScrollY from "../../helpers/ScrollY"
 import LogoSvg from "../../media/svgs/LogoSvg"
 import HamburgerSvg from "../../media/svgs/HamburgerSvg"
 
-function Header()
+function Header(props)
 {
+    const {backgroundColor} = props
     const scrollY = ScrollY()
     const defaultHeight = +(process.env.REACT_APP_HEADER_HEIGHT.replace("px", ""))
     const height = defaultHeight - (scrollY / 2) >= defaultHeight - 20 ? defaultHeight - (scrollY / 2) : defaultHeight - 20
     return (
-        <header className={`header ${scrollY ? "down" : ""}`} style={{height}}>
+        <header className={`header ${scrollY > 0 ? "down" : ""}`} style={{backgroundColor, height}}>
             <div className="header-right">
                 <div className="header-right-logo-cont">
-                    <LogoSvg className="header-right-logo"/>
-                    <div className={`header-right-logo-test ${scrollY ? "hide" : ""}`}>
+                    <LogoSvg className="header-right-logo" style={{transform: `rotate(${scrollY / 2}deg)`}}/>
+                    <div className={`header-right-logo-test ${scrollY > 0 ? "hide" : ""}`}>
                         <div className="header-right-logo-test-triangle"/>
                         <div className="header-right-logo-test-text">نسخه آزمایشی</div>
                     </div>
