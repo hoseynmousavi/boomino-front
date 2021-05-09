@@ -18,8 +18,8 @@ function Header()
             </div>
             <div className="header-left">
                 <Material className="header-right-btn">فعال‌سازی با کد USSD</Material>
-                <Material className="header-right-btn">فعال‌سازی در وب</Material>
-                <Material className="header-left-download">دریافت اپلیکیشن</Material>
+                <a href={process.env.REACT_APP_ACTIVATE_WEB_LINK} target="_blank" rel="noreferrer"><Material className="header-right-btn">فعال‌سازی در وب</Material></a>
+                <a href={process.env.REACT_APP_APK_LINK} download><Material className="header-left-download">دریافت اپلیکیشن</Material></a>
             </div>
         </header>
     )

@@ -2,6 +2,7 @@ import {useEffect} from "react"
 import loadColors from "./helpers/loadColors"
 import Header from "./views/containers/Header"
 import HomePage from "./views/pages/HomePage"
+import Footer from "./views/containers/Footer"
 
 function App()
 {
@@ -11,6 +12,7 @@ function App()
         <>
             <Header/>
             <HomePage/>
+            <Footer/>
         </>
     )
 }

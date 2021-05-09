@@ -3,6 +3,7 @@
 @import "material";
 @import "my-loader";
 @import "header";
+@import "footer";
 @import "home";
 
 @font-face {
@@ -26,7 +27,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 
   @media not all and (min-resolution: .001dpcm) {
-    letter-spacing: -1px;
+    letter-spacing: -0.9px;
   }
 }
 
@@ -39,7 +40,7 @@ button, a, input, textarea, h4, h3, h2, h1, select, video, track {
   border: none;
 
   @media not all and (min-resolution: .001dpcm) {
-    letter-spacing: -1px;
+    letter-spacing: -0.9px;
   }
 
   &:focus {
