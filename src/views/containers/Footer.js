@@ -3,7 +3,7 @@ import InstagramSvg from "../../media/svgs/InstagramSvg"
 import LinkedinSvg from "../../media/svgs/LinkedinSvg"
 import WhatsappSvg from "../../media/svgs/WhatsappSvg"
 import TelegramSvg from "../../media/svgs/TelegramSvg"
-import Material from "../components/Material"
+import HamrahWhiteSvg from "../../media/svgs/HamrahWhiteSvg"
 
 function Footer()
 {
@@ -22,19 +22,17 @@ function Footer()
                     </div>
                 </div>
                 <div className="footer-top-left">
-                    <div>
-                        <a href={process.env.REACT_APP_APK_LINK} download>
-                            <div className="footer-top-left-item">دریافت اپلیکیشن</div>
-                        </a>
-                        <a href={process.env.REACT_APP_ACTIVATE_WEB_LINK} target="_blank" rel="noreferrer">
-                            <div className="footer-top-left-item">فعال‌سازی در وب</div>
-                        </a>
-                        <div className="footer-top-left-item">فعال‌سازی با کد USSD</div>
-                        <div className="footer-top-left-item">بلاگ</div>
-                        <div className="footer-top-left-item">مرورگر دورینو</div>
-                        <div className="footer-top-left-item">سوالات متداول</div>
-                        <div className="footer-top-left-item">تماس با ما</div>
-                    </div>
+                    <a className="footer-top-left-item" href={process.env.REACT_APP_APK_LINK} download>
+                        دریافت اپلیکیشن
+                    </a>
+                    <a className="footer-top-left-item" href={process.env.REACT_APP_ACTIVATE_WEB_LINK} target="_blank" rel="noreferrer">
+                        فعال‌سازی در وب
+                    </a>
+                    <div className="footer-top-left-item">فعال‌سازی با کد USSD</div>
+                    <div className="footer-top-left-item">بلاگ</div>
+                    <div className="footer-top-left-item">مرورگر دورینو</div>
+                    <div className="footer-top-left-item">سوالات متداول</div>
+                    <div className="footer-top-left-item">تماس با ما</div>
                 </div>
             </div>
             <div className="footer-bottom">
@@ -42,6 +40,7 @@ function Footer()
                     کلیهٔ حقوق برای این سایت محفوظ است.
                 </div>
                 <div className="footer-bottom-left">
+                    <HamrahWhiteSvg className="footer-bottom-left-svg"/>
                     <div>
                         خدمتی از همراه اول
                     </div>
