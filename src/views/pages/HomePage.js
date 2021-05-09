@@ -15,12 +15,22 @@ import LogoTypeSvg from "../../media/svgs/LogoTypeSvg"
 import GuideBgSvg from "../../media/svgs/GuideBgSvg"
 import FaqItem from "../components/FaqItem"
 import LogoSvg from "../../media/svgs/LogoSvg"
+import WindSvg from "../../media/svgs/WindSvg"
+import LandingDotsSvg from "../../media/svgs/LandingDotsSvg"
+import CircleSvg from "../../media/svgs/CircleSvg"
+import LandingCurveSvg from "../../media/svgs/LandingCurveSvg"
+import LandingCurve2Svg from "../../media/svgs/LandingCurve2Svg"
+import LandingDots2Svg from "../../media/svgs/LandingDots2Svg"
+import TriangleSvg from "../../media/svgs/TriangleSvg"
+import PolygonSvg from "../../media/svgs/PolygonSvg"
 
 function HomePage()
 {
     return (
         <>
             <div className="home-first-section">
+                <WindSvg className="home-first-wind"/>
+                <LandingDotsSvg className="home-first-dots"/>
                 <div className="home-first-right">
                     <LogoSvg className="home-first-logo" />
                     <LogoTypeSvg className="home-first-logo-type"/>
@@ -53,6 +63,10 @@ function HomePage()
             </div>
 
             <div className="home-second-section">
+                <WindSvg className="home-second-wind"/>
+                <WindSvg className="home-second-wind-right"/>
+                <CircleSvg className="home-second-circle"/>
+                <LandingCurve2Svg className="home-second-curve"/>
                 <img className="home-first-first-design" src={secondDesign} alt=""/>
                 <div className="home-second-left">
                     <div className="home-second-title">بچه‌ها چقدر تو گوشی هستن و چیا می‌بینن؟</div>
@@ -65,6 +79,8 @@ function HomePage()
             </div>
 
             <div className="home-second-section">
+                <WindSvg className="home-second-wind center"/>
+                <LandingDots2Svg className="home-second-dots"/>
                 <div className="home-second-left">
                     <div className="home-second-title">بومینو خیال مادرا و پدرا رو راحت‌تر می‌کنه</div>
                     <div className="home-third-content first">
@@ -86,6 +102,8 @@ function HomePage()
             </div>
 
             <div className="home-second-section">
+                <WindSvg className="home-second-wind rotated"/>
+                <LandingCurveSvg className="home-second-curve"/>
                 <img className="home-first-first-design" src={forthDesign} alt=""/>
                 <div className="home-second-left">
                     <div className="home-second-title">کلی محتوای جذاب توی بومینو پیدا کنید</div>
@@ -116,6 +134,7 @@ function HomePage()
             <div className="home-guide">
                 <GuideBgSvg className="home-guide-bg"/>
                 <GuideBgSvg className="home-guide-bg-down"/>
+                <TriangleSvg className="home-download-triangle" />
                 <div className="home-guide-title">چطور از بومینو استفاده کنم؟</div>
                 <div className="home-guide-content">
                     <div className="home-guide-content-text">
@@ -144,6 +163,7 @@ function HomePage()
             </div>
 
             <div className="home-questions">
+                <PolygonSvg className="home-questions-polygon"/>
                 <div className="home-questions-title">سوالات متداول</div>
                 <FaqItem title="آیا استفاده از بومینو برای من هزینه دارد؟ آیا استفاده از بومینو برای من هزینه دارد؟ آیا استفاده از بومینو برای من هزینه دارد؟"
                          answer="بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند بومینو کاملا رایگانه و در هیچ مرحله و فرایندی هزینه‌ای را به شما تحمیل نمیکند "/>
