@@ -1,9 +1,6 @@
-import TwitterSvg from "../../media/svgs/TwitterSvg"
-import InstagramSvg from "../../media/svgs/InstagramSvg"
-import LinkedinSvg from "../../media/svgs/LinkedinSvg"
-import WhatsappSvg from "../../media/svgs/WhatsappSvg"
-import TelegramSvg from "../../media/svgs/TelegramSvg"
 import HamrahWhiteSvg from "../../media/svgs/HamrahWhiteSvg"
+import LogoSvg from "../../media/svgs/LogoSvg"
+import SocialIcons from "../components/SocialIcons"
 
 function Footer()
 {
@@ -11,14 +8,13 @@ function Footer()
         <footer className="footer">
             <div className="footer-top">
                 <div className="footer-top-right">
-                    <div className="footer-top-right-title">بومینو | از اینجا بچه‌تونو بفرستید اینترنت</div>
+                    <div className="footer-top-right-title">
+                        <LogoSvg className="footer-top-right-title-svg"/>
+                        <div className="footer-top-right-title-text">بومینو | از اینجا بچه‌تونو بفرستید اینترنت</div>
+                    </div>
                     <div className="footer-top-right-desc">بومینو همراه خونواده‌هاست تا خیالشون از حضور بچه‌ها تو اینترنت راحت‌تر باشه، با مراقبت از بچه‌ها و معرفی محتوای جذاب.</div>
                     <div className="footer-top-right-social">
-                        <TwitterSvg className="footer-top-right-social-svg"/>
-                        <InstagramSvg className="footer-top-right-social-svg"/>
-                        <LinkedinSvg className="footer-top-right-social-svg"/>
-                        <WhatsappSvg className="footer-top-right-social-svg"/>
-                        <TelegramSvg className="footer-top-right-social-svg"/>
+                        <SocialIcons/>
                     </div>
                 </div>
                 <div className="footer-top-left">
@@ -35,6 +31,9 @@ function Footer()
                     <div className="footer-top-left-item">تماس با ما</div>
                 </div>
             </div>
+            <div className="footer-top-right-social mobile">
+                <SocialIcons/>
+            </div>
             <div className="footer-bottom">
                 <div className="footer-bottom-right">
                     کلیهٔ حقوق برای این سایت محفوظ است.
@@ -42,7 +41,7 @@ function Footer()
                 <div className="footer-bottom-left">
                     <HamrahWhiteSvg className="footer-bottom-left-svg"/>
                     <div>
-                        قدرت گرفته از همراه اول
+                        قدرت‌گرفته از همراه اول
                     </div>
                 </div>
             </div>

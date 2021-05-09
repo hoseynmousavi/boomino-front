@@ -1,6 +1,7 @@
 import Material from "../components/Material"
 import ScrollY from "../../helpers/ScrollY"
 import LogoSvg from "../../media/svgs/LogoSvg"
+import HamburgerSvg from "../../media/svgs/HamburgerSvg"
 
 function Header()
 {
@@ -15,6 +16,9 @@ function Header()
                 <Material className="header-right-btn">بلاگ</Material>
                 <Material className="header-right-btn">سوالات متداول</Material>
                 <Material className="header-right-btn">تماس با ما</Material>
+
+                <HamburgerSvg className="header-hamburger"/>
+                <div className="header-hamburger-name">{process.env.REACT_APP_NAME}</div>
             </div>
             <div className="header-left">
                 <Material className="header-right-btn">فعال‌سازی با کد USSD</Material>

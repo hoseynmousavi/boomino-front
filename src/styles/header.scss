@@ -30,6 +30,10 @@
   height: 55px;
   object-fit: contain;
   margin-left: 10px;
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 }
 
 .header-right-btn {
@@ -37,6 +41,10 @@
   margin-left: 20px;
   border-radius: var(--first-radius);
   cursor: pointer;
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 }
 
 .header-left {
@@ -47,4 +55,25 @@
 
 .header-left-download {
   @include first-btn;
+}
+
+.header-hamburger {
+  display: none;
+
+  @media screen and (max-width: 480px) {
+    display: block;
+    width: 40px;
+    margin-right: -8px;
+  }
+}
+
+.header-hamburger-name {
+  display: none;
+
+  @media screen and (max-width: 480px) {
+    display: block;
+    font-size: var(--big-font);
+    font-weight: bold;
+    margin-right: 10px;
+  }
 }
