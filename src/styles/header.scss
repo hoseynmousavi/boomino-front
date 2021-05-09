@@ -2,7 +2,8 @@
 
 .header {
   height: var(--header-height);
-  padding: 0 var(--header-grid-padding);
+  padding-right: var(--header-grid-padding);
+  padding-left: var(--header-grid-padding);
   background-color: var(--second-background-color);
   z-index: var(--header-z-index);
   display: flex;
@@ -12,7 +13,7 @@
   top: 0;
   right: 0;
   left: 0;
-  transition: box-shadow ease 0.2s;
+  transition: box-shadow ease 0.2s, height ease 0.05s;
 
   &.down {
     box-shadow: var(--first-shadow);
