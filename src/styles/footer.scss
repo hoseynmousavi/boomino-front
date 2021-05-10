@@ -97,6 +97,10 @@
   width: 23px;
   height: 23px;
   margin-left: 20px;
+
+  &:last-child {
+    margin-left: 0;
+  }
 }
 
 .footer-top-left {
@@ -116,23 +120,35 @@
 .footer-top-left-item {
   display: block;
   font-size: var(--title-font);
-  margin: 10px 0;
-
-  &:first-child {
-    margin-top: 0;
-  }
+  margin-bottom: 20px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @media screen and (max-width: 480px) {
-    &:nth-child(odd) {
-      width: 55%;
-    }
+    width: 50%;
 
-    &:nth-child(even) {
-      width: 45%;
+    &.app {
+      order: 0;
+    }
+    &.web {
+      order: 2;
+    }
+    &.ussd {
+      order: 5;
+    }
+    &.blog {
+      order: 7;
+    }
+    &.browser {
+      order: 1;
+    }
+    &.questions {
+      order: 3;
+    }
+    &.contact {
+      order: 6;
     }
   }
 }

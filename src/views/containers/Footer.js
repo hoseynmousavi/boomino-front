@@ -18,17 +18,17 @@ function Footer()
                     </div>
                 </div>
                 <div className="footer-top-left">
-                    <a className="footer-top-left-item" href={process.env.REACT_APP_APK_LINK} download>
+                    <a className="footer-top-left-item app" href={process.env.REACT_APP_APK_LINK} download>
                         دریافت اپلیکیشن
                     </a>
-                    <a className="footer-top-left-item" href={process.env.REACT_APP_ACTIVATE_WEB_LINK} target="_blank" rel="noreferrer">
+                    <a className="footer-top-left-item web" href={process.env.REACT_APP_ACTIVATE_WEB_LINK} target="_blank" rel="noreferrer">
                         فعال‌سازی در وب
                     </a>
-                    <div className="footer-top-left-item">فعال‌سازی با کد USSD</div>
-                    <div className="footer-top-left-item">بلاگ</div>
-                    <div className="footer-top-left-item">مرورگر دورینو</div>
-                    <div className="footer-top-left-item">سوالات متداول</div>
-                    <div className="footer-top-left-item">تماس با ما</div>
+                    <div className="footer-top-left-item ussd">فعال‌سازی با کد USSD</div>
+                    <div className="footer-top-left-item blog">بلاگ</div>
+                    <div className="footer-top-left-item browser">مرورگر دورینو</div>
+                    <div className="footer-top-left-item questions">سوالات متداول</div>
+                    <div className="footer-top-left-item contact">تماس با ما</div>
                 </div>
             </div>
             <div className="footer-top-right-social mobile">
