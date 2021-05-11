@@ -19,7 +19,7 @@ function Footer()
                 </div>
                 <div className="footer-top-left">
                     <a className="footer-top-left-item app" href={process.env.REACT_APP_APK_LINK} download>
-                        دریافت اپلیکیشن
+                        فعال‌سازی
                     </a>
                     <a className="footer-top-left-item web" href={process.env.REACT_APP_ACTIVATE_WEB_LINK} target="_blank" rel="noreferrer">
                         فعال‌سازی در وب

@@ -171,22 +171,12 @@
   }
 }
 
-.home-first-logo {
-  display: none;
-
-  @media screen and (max-width: 480px) {
-    display: block;
-    width: 25%;
-    margin: 0 37.5% 15px 37.5%;
-  }
-}
-
 .home-first-logo-type {
   width: 100%;
 
   @media screen and (max-width: 480px) {
     width: 72%;
-    margin: 0 14%;
+    margin: 120px 14% 0 14%;
   }
 }
 
@@ -257,6 +247,10 @@
     width: 80%;
     padding: 15px 0;
     font-size: var(--big-font);
+
+    &.bigger {
+      width: 100%;
+    }
   }
 }
 
@@ -389,7 +383,7 @@
   }
 
   @media screen and (max-width: 480px) {
-    margin: 100px var(--mobile-grid-padding) 50px var(--mobile-grid-padding);
+    margin: 50px var(--mobile-grid-padding) 50px var(--mobile-grid-padding);
     flex-wrap: wrap;
     padding: 0;
     background-color: var(--second-background-color);
@@ -433,8 +427,7 @@
   }
 
   @media screen and (max-width: 480px) {
-    display: block;
-    margin: -70px auto 0 auto;
+    display: none;
   }
 }
 
@@ -530,7 +523,7 @@
 
 .home-guide {
   position: relative;
-  margin: 35vw 0;
+  margin: 30vw 0;
   padding: 50px var(--desktop-grid-padding);
   background-color: var(--third-background-color);
 
@@ -699,6 +692,16 @@
   }
 }
 
+.home-questions-download-title {
+  margin-top: 80px;
+  font-size: var(--very-big-font);
+  font-weight: bold;
+
+  @media screen and (max-width: 480px) {
+    font-size: var(--title-font);
+  }
+}
+
 .home-questions-title {
   font-size: var(--very-big-font);
   font-weight: bold;
@@ -718,13 +721,16 @@
   justify-content: space-between;
   padding: 15px 25px;
   border: 1px solid var(--first-color);
+  border-bottom: 1px solid var(--first-color);
   border-radius: var(--second-radius);
   font-size: var(--title-font);
   cursor: pointer;
-  transition: border-radius ease 0.1s;
+  transition: border-radius ease 0.1s 0.1s, border-bottom ease 0.1s 0s;
 
   &.open {
+    transition: border-radius ease 0.1s 0s, border-bottom ease 0.1s 0.1s;
     border-radius: var(--second-radius) var(--second-radius) 0 0;
+    border-bottom: 1px solid transparent;
   }
 }
 

@@ -14,7 +14,6 @@ import AppBgSvg from "../../media/svgs/AppBgSvg"
 import LogoTypeSvg from "../../media/svgs/LogoTypeSvg"
 import GuideBgSvg from "../../media/svgs/GuideBgSvg"
 import FaqItem from "../components/FaqItem"
-import LogoSvg from "../../media/svgs/LogoSvg"
 import WindSvg from "../../media/svgs/WindSvg"
 import LandingDotsSvg from "../../media/svgs/LandingDotsSvg"
 import CircleSvg from "../../media/svgs/CircleSvg"
@@ -36,7 +35,6 @@ function HomePage()
                 <WindSvg className="home-first-wind first"/>
                 <LandingDotsSvg className="home-first-dots"/>
                 <div className="home-first-right">
-                    <LogoSvg className="home-first-logo"/>
                     <LogoTypeSvg className="home-first-logo-type"/>
                     <div className="home-first-title">از اینجا بچه‌تونو بفرستید اینترنت!</div>
                     <div className="home-first-desc">
@@ -46,7 +44,7 @@ function HomePage()
                     </div>
                     <div className="home-first-desktop-section">
                         <a href={process.env.REACT_APP_APK_LINK} download>
-                            <Material className="home-first-download">دریافت اپلیکیشن</Material>
+                            <Material className="home-first-download">فعال‌سازی</Material>
                         </a>
                         <div className="home-first-support">
                             <HamrahSvg className="home-first-support-svg"/>
@@ -57,7 +55,7 @@ function HomePage()
                 <img className="home-first-first-design" src={firstDesign} alt=""/>
                 <div className="home-first-mobile-section">
                     <a className="home-first-download-cont mobile" href={process.env.REACT_APP_APK_LINK} download>
-                        <Material className="home-first-download">دریافت اپلیکیشن</Material>
+                        <Material className="home-first-download">فعال‌سازی</Material>
                     </a>
                     <div className="home-first-support mobile">
                         <HamrahSvg className="home-first-support-svg"/>
@@ -78,7 +76,7 @@ function HomePage()
                         بچه‌های امروزی بیشتر از هر زمان دیگه و از سنین پایین‌تری، وقتشون رو با اینترنت می‌گذرونن و خیلی راحت به هر محتوایی که مناسب سن‌شون نیست، دسترسی دارن.
                     </div>
                     <div className="home-second-more">بیشتر بدونیم</div>
-                    <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
+                    <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">فعال‌سازی</Material></a>
                 </div>
             </div>
 
@@ -100,7 +98,7 @@ function HomePage()
                         <div>هر موقع که بخواید می‌تونید یه گزارش از فعالیت بچه‌تون داشته باشید</div>
                     </div>
                     <div className="home-second-more">بیشتر بدونیم</div>
-                    <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
+                    <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">فعال‌سازی</Material></a>
                 </div>
                 <img loading="lazy" className="home-first-first-design" src={thirdDesign} alt=""/>
             </div>
@@ -117,7 +115,7 @@ function HomePage()
                         پیشنهادات بومینو خیالتون رو از نوع تاثیرگذاری محتوا راحت‌تر می‌کنه
                     </div>
                     <div className="home-second-more">بیشتر بدونیم</div>
-                    <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
+                    <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">فعال‌سازی</Material></a>
                 </div>
             </div>
 
@@ -170,7 +168,7 @@ function HomePage()
                 <PolygonSvg className="home-questions-polygon"/>
                 <div className="home-questions-title">سوالات متداول</div>
                 <FaqItem title="آیا استفاده از بومینو برای ما هزینه داره؟"
-                         answer="نه."
+                         answer="خیر. استفاده از اپلیکیشن بومینو و کنترل استفادهٔ بچه‌ها از اینترنت هزینه‌ای نداره. بسیاری از محتواهای جذابی که معرفی می‌کنیم هم رایگان هستن."
                 />
                 <FaqItem title="آیا بومینو روی همهٔ گوشی‌ها قابل استفاده است؟"
                          answer="در حال حاضر بومینو روی همهٔ گوشی‌ها و تبلت‌های اندرویدی قابل استفاده است. کاربران iOS می‌تونن از نسخهٔ وب و یا از مسیر کدهای USSD اقدام کنن. البته در حال حاضر فقط می‌شه دسترسی اینترنت سیم‌کارت‌های همراه اول رو کنترل و محدود کرد."
@@ -181,7 +179,11 @@ function HomePage()
                 <FaqItem title="آیا می‌شه مصرف اینترنت wifi و adsl و ... رو هم کنترل کرد؟"
                          answer="در حال حاضر فقط اینترنتی که با سیم‌کارت همراه اول در اختیار بچه‌تون گذاشتید رو می‌تونید کنترل کنید. به زودی در نسخه‌های بعدی کنترل بقیهٔ اینترنت‌ها هم ممکن می‌شه."
                 />
-                <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">دریافت اپلیکیشن</Material></a>
+                <FaqItem title="آیا بومینو فقط برای سیم‌کارت‌های همراه اول قابل استفاده‌ست؟"
+                         answer="استفاده از قابلیت محدودکردن دسترسی بچه‌ها به محتوای مناسب ردهٔ سنی‌شون، در حال حاضر فقط برای اینترنت‌هایی که از سیم‌کارت همراه اول هستند امکان‌پذیره. به زودی کنترل بقیهٔ اینترنت‌ها هم ممکن می‌شه."
+                />
+                <div className="home-questions-download-title">همین حالا اپلیکیشن بومینو رو نصب کنید و از اینجا بچه‌تونو بفرستید اینترنت!</div>
+                <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download bigger">فعال‌سازی</Material></a>
             </div>
         </div>
     )

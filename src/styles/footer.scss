@@ -2,7 +2,7 @@
 
 .footer {
   background-color: var(--third-color);
-  padding: 50px var(--header-grid-padding) 35px var(--header-grid-padding);
+  padding: 50px calc(var(--header-grid-padding) + 4%) 35px calc(var(--header-grid-padding) + 4%);
   color: var(--solid-light);
   display: block;
 
@@ -57,7 +57,7 @@
   margin-left: 5%;
   margin-right: calc(-5% - 50px);
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 800px) {
     display: none;
   }
 

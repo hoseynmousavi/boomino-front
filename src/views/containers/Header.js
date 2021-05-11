@@ -9,12 +9,14 @@ function Header(props)
     const scrollY = ScrollY()
     const defaultHeight = +(process.env.REACT_APP_HEADER_HEIGHT.replace("px", ""))
     const height = defaultHeight - (scrollY / 2) >= defaultHeight - 20 ? defaultHeight - (scrollY / 2) : defaultHeight - 20
+    const logoHeightMobile = 80 - scrollY >= 50 ? 80 - scrollY : 50
+    const logoMarginMobile = 100 - scrollY >= 0 ? 100 - scrollY : 0
     return (
-        <header className={`header ${scrollY > 0 ? "down" : ""}`} style={{backgroundColor, zIndex, height}}>
+        <header className={`header ${logoMarginMobile === 0 ? "down-mobile" : ""} ${scrollY > 0 ? "down" : ""}`} style={{backgroundColor, zIndex, height}}>
             <div className="header-right">
-                <div className="header-right-logo-cont">
+                <div className="header-right-logo-cont" style={{marginTop: `${logoMarginMobile}px`, left: `calc(50% - ${logoHeightMobile / 2}px)`, top: `calc(50% - ${logoHeightMobile / 2}px)`, height: `${logoHeightMobile}px`}}>
                     <LogoSvg className="header-right-logo" style={{transform: `rotate(${scrollY / 2}deg)`}}/>
-                    <div className={`header-right-logo-test ${scrollY > 0 ? "hide" : ""}`}>
+                    <div className={`header-right-logo-test ${logoMarginMobile <= 75 && logoMarginMobile !== 0 ? "" : "hide-mobile"} ${scrollY > 0 ? "hide" : ""}`}>
                         <div className="header-right-logo-test-triangle"/>
                         <div className="header-right-logo-test-text">نسخه آزمایشی</div>
                     </div>
@@ -30,7 +32,7 @@ function Header(props)
             <div className="header-left">
                 <Material className="header-right-btn">فعال‌سازی با کد USSD</Material>
                 <a href={process.env.REACT_APP_ACTIVATE_WEB_LINK} target="_blank" rel="noreferrer"><Material className="header-right-btn">فعال‌سازی در وب</Material></a>
-                <a href={process.env.REACT_APP_APK_LINK} download><Material className="header-left-download">دریافت اپلیکیشن</Material></a>
+                <a href={process.env.REACT_APP_APK_LINK} download><Material className="header-left-download">فعال‌سازی</Material></a>
             </div>
         </header>
     )
