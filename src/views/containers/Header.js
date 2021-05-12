@@ -9,7 +9,7 @@ function Header(props)
     const scrollY = ScrollY()
     const defaultHeight = +(process.env.REACT_APP_HEADER_HEIGHT.replace("px", ""))
     const height = defaultHeight - (scrollY / 2) >= defaultHeight - 20 ? defaultHeight - (scrollY / 2) : defaultHeight - 20
-    const logoHeightMobile = 80 - scrollY >= 50 ? 80 - scrollY : 50
+    const logoHeightMobile = 80 - (scrollY / 2) >= 50 ? 80 - (scrollY / 2) : 50
     const logoMarginMobile = 100 - scrollY >= 0 ? 100 - scrollY : 0
     return (
         <header className={`header ${logoMarginMobile === 0 ? "down-mobile" : ""} ${scrollY > 0 ? "down" : ""}`} style={{backgroundColor, zIndex, height}}>
