@@ -13,7 +13,7 @@
   right: 0;
   left: 0;
   text-align: center;
-  transition: box-shadow ease 0.2s, height ease 0.01s;
+  transition: box-shadow ease 0.2s;
 
   @media screen and (min-width: 480px) {
     &.down {
@@ -46,7 +46,6 @@
 
   @media screen and (max-width: 480px) {
     position: absolute;
-    transition: height linear 0.01s, margin-top linear 0.01s, left linear 0.01s, top linear 0.01s;
   }
 }
 
@@ -55,7 +54,6 @@
   object-fit: contain;
   display: block;
   will-change: transform;
-  transition: transform linear 0.01s;
 }
 
 .header-right-logo-test {
