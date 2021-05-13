@@ -12,7 +12,6 @@ import AppStoreSvg from "../../media/svgs/AppStoreSvg"
 import Picture from "../components/Picture"
 import AppBgSvg from "../../media/svgs/AppBgSvg"
 import LogoTypeSvg from "../../media/svgs/LogoTypeSvg"
-import GuideBgSvg from "../../media/svgs/GuideBgSvg"
 import FaqItem from "../components/FaqItem"
 import WindSvg from "../../media/svgs/WindSvg"
 import LandingDotsSvg from "../../media/svgs/LandingDotsSvg"
@@ -20,9 +19,9 @@ import CircleSvg from "../../media/svgs/CircleSvg"
 import LandingCurveSvg from "../../media/svgs/LandingCurveSvg"
 import LandingCurve2Svg from "../../media/svgs/LandingCurve2Svg"
 import LandingDots2Svg from "../../media/svgs/LandingDots2Svg"
-import TriangleSvg from "../../media/svgs/TriangleSvg"
 import PolygonSvg from "../../media/svgs/PolygonSvg"
 import Header from "../containers/Header"
+import HomeGuide from "../containers/HomeGuide"
 
 function HomePage()
 {
@@ -133,36 +132,7 @@ function HomePage()
                 </div>
             </div>
 
-            <div className="home-guide">
-                <GuideBgSvg className="home-guide-bg"/>
-                <GuideBgSvg className="home-guide-bg-down"/>
-                <TriangleSvg className="home-download-triangle"/>
-                <div className="home-guide-title">چطور از بومینو استفاده کنم؟</div>
-                <div className="home-guide-content">
-                    <div className="home-guide-content-text">
-                        <div className="home-guide-item">
-                            <div className="home-guide-item-title">1. دانلود</div>
-                            <div>ابتدا اپلیکیشن را دانلود<br/>و نصب کنید.</div>
-                        </div>
-                        <div className="home-guide-item disable">
-                            <div className="home-guide-item-title disable">2. ساخت اکانت</div>
-                            <div>ثبت‌نام کنید و فرزند یا<br/>فرزندانتان را تعریف کنید.</div>
-                        </div>
-                        <div className="home-guide-item disable">
-                            <div className="home-guide-item-title disable">3. فعال‌کردن اینترنت کودک</div>
-                            <div>اینترنت را فعال کنید و<br/>با خیال آسوده<br/>به فرزندتان بسپارید.</div>
-                        </div>
-                    </div>
-                    <div className="home-guide-dot-cont">
-                        <div className="home-guide-dot"/>
-                        <div className="home-guide-dot disable"/>
-                        <div className="home-guide-dot disable"/>
-                        <div className="home-guide-dot disable"/>
-                        <div className="home-guide-dot disable"/>
-                    </div>
-                    <PhoneSvg className="home-guide-img"/>
-                </div>
-            </div>
+            <HomeGuide/>
 
             <div className="home-questions">
                 <PolygonSvg className="home-questions-polygon"/>
