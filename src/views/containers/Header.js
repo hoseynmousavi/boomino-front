@@ -14,9 +14,9 @@ function Header(props)
     return (
         <header className={`header ${logoMarginMobile === 0 ? "down-mobile" : ""} ${scrollY > 0 ? "down" : ""}`} style={{backgroundColor, zIndex, height}}>
             <div className="header-right">
-                <div className="header-right-logo-cont" style={{marginTop: `${logoMarginMobile}px`, left: `calc(50% - ${logoHeightMobile / 2}px)`, top: `calc(50% - ${logoHeightMobile / 2}px)`, height: `${logoHeightMobile}px`}}>
+                <div className="header-right-logo-cont" style={{transform: `translate3d(-50%, calc(-50% + ${logoMarginMobile}px), 0) scale(${logoHeightMobile / 50})`}}>
                     <LogoSvg className="header-right-logo" style={{transform: `rotate(${scrollY / 2}deg)`}}/>
-                    <div className={`header-right-logo-test ${logoMarginMobile <= 75 && logoMarginMobile !== 0 ? "" : "hide-mobile"} ${scrollY > 0 ? "hide" : ""}`}>
+                    <div className={`header-right-logo-test ${logoMarginMobile <= 62 && logoMarginMobile !== 0 ? "" : "hide-mobile"} ${scrollY > 0 ? "hide" : ""}`}>
                         <div className="header-right-logo-test-triangle"/>
                         <div className="header-right-logo-test-text">نسخه آزمایشی</div>
                     </div>
