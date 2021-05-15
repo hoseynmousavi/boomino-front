@@ -22,7 +22,7 @@ function Header(props)
                     </div>
                 </div>
                 <Material className="header-right-btn">مرورگر دورینو</Material>
-                <Material className="header-right-btn">بلاگ</Material>
+                <a href="/blog" target="_blank" rel="noreferrer"><Material className="header-right-btn">بلاگ</Material></a>
                 <Material className="header-right-btn">سوالات متداول</Material>
                 <Material className="header-right-btn">تماس با ما</Material>
 
