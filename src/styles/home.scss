@@ -521,8 +521,7 @@
 }
 
 .home-guide {
-  position: relative;
-  margin: 30vw 0;
+  height: 800px;
   padding: 50px var(--desktop-grid-padding);
   background-color: var(--third-background-color);
 
@@ -531,9 +530,12 @@
   }
 
   @media screen and (max-width: 480px) {
-    margin: 200px 0 150px 0;
     padding: 50px var(--mobile-grid-padding);
   }
+}
+
+.home-guide-inner {
+  height: 515px;
 }
 
 .home-guide-bg {
@@ -595,6 +597,7 @@
   font-size: var(--big-font);
   text-align: right;
   margin-bottom: 30px;
+  transition: all ease 0.2s;
 
   &.disable {
     color: var(--disable-color);
@@ -616,6 +619,7 @@
   color: var(--first-color);
   font-weight: bold;
   margin-bottom: 8px;
+  transition: all ease 0.2s;
 
   &.disable {
     color: var(--disable-color);
@@ -628,6 +632,23 @@
 
 .home-guide-img {
   width: 250px;
+  transition: all ease 0.2s;
+
+  &.img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &.disable {
+    opacity: 0;
+  }
 
   @media screen and (max-width: 480px) {
     width: 200px;
