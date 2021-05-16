@@ -26,7 +26,7 @@ function HomeGuide()
             <GuideBgSvg className="home-guide-bg"/>
             <GuideBgSvg className="home-guide-bg-down"/>
             <TriangleSvg className="home-download-triangle"/>
-            <div className="home-guide-inner" style={{transform: `translate3d(0,${margin}px,0)`}}>
+            <div className="home-guide-inner" style={{position: margin > 0 && margin < 800 ? "fixed" : "static", top: headerHeight + "px", transform: margin > 0 && margin < 800 ? `none` : `translate3d(0,${margin}px,0)`}}>
                 <div className="home-guide-title">چطور از بومینو استفاده کنم؟</div>
                 <div className="home-guide-content">
                     <div className="home-guide-content-text">
