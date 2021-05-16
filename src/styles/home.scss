@@ -408,7 +408,7 @@
 
   @media screen and (max-width: 480px) {
     width: 45vw;
-    bottom: -80%;
+    bottom: 0;
   }
 }
 
@@ -521,21 +521,28 @@
 }
 
 .home-guide {
-  height: 800px;
-  padding: 50px var(--desktop-grid-padding);
+  margin: 20vw 0;
+  position: relative;
+  height: 1470px;
+  padding: 0 var(--desktop-grid-padding);
   background-color: var(--third-background-color);
 
   @media screen and (max-width: 1000px) {
-    padding: 50px var(--tablet-grid-padding);
+    padding: 0 var(--tablet-grid-padding);
   }
 
   @media screen and (max-width: 480px) {
-    padding: 50px var(--mobile-grid-padding);
+    margin: 200px 0 150px 0;
+    padding: 0 var(--mobile-grid-padding);
   }
 }
 
 .home-guide-inner {
-  height: 515px;
+  padding: 50px;
+  height: 570px;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .home-guide-bg {
@@ -597,7 +604,18 @@
   font-size: var(--big-font);
   text-align: right;
   margin-bottom: 30px;
+  height: 100px;
+  overflow: hidden;
   transition: all ease 0.2s;
+
+  &.hide {
+    height: 0;
+    margin-bottom: 0;
+
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
 
   &.disable {
     color: var(--disable-color);
@@ -611,6 +629,7 @@
     text-align: center;
     margin-top: 25px;
     font-size: var(--title-font);
+    white-space: nowrap;
   }
 }
 
@@ -632,6 +651,7 @@
 
 .home-guide-img {
   width: 250px;
+  opacity: 1;
   transition: all ease 0.2s;
 
   &.img {
@@ -639,6 +659,12 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+
+    @media screen and (max-width: 480px) {
+      top: 0;
+      left: auto;
+      transform: none;
+    }
 
     img {
       width: 100%;
