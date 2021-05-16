@@ -29,7 +29,7 @@ function HomePage()
         <div className="home">
             <div className="home-first-section">
                 <div className="home-header-cont">
-                    <Header zIndex="calc(var(--header-z-index) + 1)" backgroundColor="var(--second-background-color)"/>
+                    <Header zIndex="calc(var(--header-z-index) + 1)" backgroundColor="var(--second-background-color)" disableShadow/>
                 </div>
                 <WindSvg className="home-first-wind first"/>
                 <LandingDotsSvg className="home-first-dots"/>

@@ -26,6 +26,10 @@
       box-shadow: var(--first-shadow);
     }
   }
+
+  &.disable-shadow {
+    box-shadow: none;
+  }
 }
 
 .header-right {
