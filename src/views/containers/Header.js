@@ -9,9 +9,9 @@ function Header(props)
     const {backgroundColor = "var(--background-color)", zIndex = "var(--header-z-index)", disableShadow} = props
     const scrollY = ScrollY()
     const defaultHeight = +(process.env.REACT_APP_HEADER_HEIGHT.replace("px", ""))
-    const height = defaultHeight - (scrollY / 2) >= defaultHeight - 20 ? defaultHeight - (scrollY / 2) : defaultHeight - 20
-    const logoHeightMobile = 80 - (scrollY / 2) >= 50 ? 80 - (scrollY / 2) : 50
-    const logoMarginMobile = 100 - scrollY >= 0 ? 100 - scrollY : 0
+    const height = Math.max(defaultHeight - (scrollY / 2), defaultHeight - 20)
+    const logoHeightMobile = Math.max(80 - (scrollY / 2), 50)
+    const logoMarginMobile = Math.max(100 - scrollY, 0)
     return (
         <header className={`header ${disableShadow ? "disable-shadow" : ""} ${logoMarginMobile === 0 ? "down-mobile" : ""} ${scrollY > 0 ? "down" : ""}`} style={{backgroundColor, zIndex, height}}>
             <div className="header-right">
