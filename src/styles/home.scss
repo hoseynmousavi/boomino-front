@@ -1,11 +1,5 @@
 @import "mixin";
 
-.home {
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: visible;
-}
-
 .home-first-section {
   position: relative;
   display: flex;
@@ -139,13 +133,12 @@
 
 .home-second-dots {
   position: absolute;
-  left: -15px;
+  left: 0;
   top: 47%;
   width: 15vw;
 
   @media screen and (max-width: 480px) {
     top: 28%;
-    left: -10px;
     width: 20vw;
   }
 }

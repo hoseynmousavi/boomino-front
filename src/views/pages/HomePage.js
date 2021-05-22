@@ -26,7 +26,7 @@ import HomeGuide from "../containers/HomeGuide"
 function HomePage()
 {
     return (
-        <div className="home">
+        <>
             <div className="home-first-section">
                 <div className="home-header-cont">
                     <Header zIndex="calc(var(--header-z-index) + 1)" backgroundColor="var(--second-background-color)" disableShadow/>
@@ -155,7 +155,7 @@ function HomePage()
                 <div className="home-questions-download-title">همین حالا اپلیکیشن بومینو رو نصب کنید و از اینجا بچه‌تونو بفرستید اینترنت!</div>
                 <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download bigger">فعال‌سازی</Material></a>
             </div>
-        </div>
+        </>
     )
 }
 
