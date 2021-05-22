@@ -5,12 +5,15 @@ import AppStoreSvg from "../../../media/svgs/AppStoreSvg"
 import Picture from "../../components/Picture"
 import bazaar from "../../../media/images/bazaar.png"
 import ScrollY from "../../../helpers/ScrollY"
+import {useRef} from "react"
 
 function HomeDownload()
 {
+    const phoneRef = useRef(null)
     const scrollY = ScrollY()
+    console.log(scrollY, phoneRef?.current?.offsetTop)
     return (
-        <div className="home-download-app">
+        <div className="home-download-app" ref={phoneRef}>
             <AppBgSvg className="home-download-app-bg"/>
             <div className="home-download-app-svg-cont">
                 <PhoneSvg className="home-download-app-svg"/>

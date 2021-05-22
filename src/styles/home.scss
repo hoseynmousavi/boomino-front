@@ -371,14 +371,14 @@
 
 .home-download-app {
   position: relative;
-  padding: 50px;
+  padding: 0 50px 50px 50px;
   margin: 250px var(--desktop-grid-padding) 100px var(--desktop-grid-padding);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 
   @media screen and (max-width: 1000px) {
-    padding: 30px;
+    padding: 0 30px 30px 30px;
     margin: 250px var(--tablet-grid-padding) 100px var(--tablet-grid-padding);
   }
 
@@ -416,6 +416,7 @@
 .home-download-app-svg-cont {
   width: 200px;
   min-width: 200px;
+  background-color: red;
 
   @media screen and (max-width: 480px) {
     display: none;
