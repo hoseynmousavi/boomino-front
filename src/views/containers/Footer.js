@@ -25,10 +25,18 @@ function Footer()
                         فعال‌سازی در وب
                     </a>
                     <div className="footer-top-left-item ussd">فعال‌سازی با کد USSD</div>
-                    <div className="footer-top-left-item blog">بلاگ</div>
-                    <div className="footer-top-left-item browser">مرورگر دورینو</div>
-                    <div className="footer-top-left-item questions">سوالات متداول</div>
-                    <div className="footer-top-left-item contact">تماس با ما</div>
+                    <a className="footer-top-left-item blog" href={process.env.REACT_APP_BLOG_LINK} target="_blank" rel="noreferrer">
+                        بلاگ
+                    </a>
+                    <div className="footer-top-left-item browser">
+                        مرورگر دورینو
+                    </div>
+                    <div className="footer-top-left-item questions">
+                        سوالات متداول
+                    </div>
+                    <div className="footer-top-left-item contact">
+                        تماس با ما
+                    </div>
                 </div>
             </div>
             <div className="footer-top-right-social mobile">

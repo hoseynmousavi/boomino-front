@@ -514,8 +514,13 @@
 }
 
 .home-guide {
-  background-color: var(--third-background-color);
   padding: 50px var(--desktop-grid-padding);
+  background-color: var(--third-background-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   @media screen and (max-width: 1000px) {
     padding: 50px var(--tablet-grid-padding);
@@ -566,6 +571,7 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  width: 100%;
 
   @media screen and (max-width: 480px) {
     justify-content: center;

@@ -2,15 +2,9 @@ import firstDesign from "../../media/images/1stIllustration.png"
 import secondDesign from "../../media/images/2ndIllustration.png"
 import thirdDesign from "../../media/images/3rdIllustration.png"
 import forthDesign from "../../media/images/4thIllustration.png"
-import bazaar from "../../media/images/bazaar.png"
 import Material from "../components/Material"
 import HamrahSvg from "../../media/svgs/HamrahSvg"
 import CheckSvg from "../../media/svgs/CheckSvg"
-import PhoneSvg from "../../media/svgs/PhoneSvg"
-import PlayStoreSvg from "../../media/svgs/PlayStoreSvg"
-import AppStoreSvg from "../../media/svgs/AppStoreSvg"
-import Picture from "../components/Picture"
-import AppBgSvg from "../../media/svgs/AppBgSvg"
 import LogoTypeSvg from "../../media/svgs/LogoTypeSvg"
 import WindSvg from "../../media/svgs/WindSvg"
 import LandingDotsSvg from "../../media/svgs/LandingDotsSvg"
@@ -23,6 +17,7 @@ import Header from "../containers/Header"
 import TriangleSvg from "../../media/svgs/TriangleSvg"
 import HomeFaqItem from "../components/Home/HomeFaqItem"
 import HomeGuide from "../containers/Home/HomeGuide"
+import HomeDownload from "../containers/Home/HomeDownload"
 
 function HomePage()
 {
@@ -119,19 +114,7 @@ function HomePage()
                 </div>
             </div>
 
-            <div className="home-download-app">
-                <AppBgSvg className="home-download-app-bg"/>
-                <PhoneSvg className="home-download-app-svg"/>
-                <div className="home-download-app-content">
-                    <div className="home-download-app-title">همین حالا اپلیکیشن بومینو رو نصب کنید</div>
-                    <div className="home-download-app-desc">استفاده از بومینو کاملا رایگانه</div>
-                    <div className="home-download-app-store">
-                        <PlayStoreSvg className="home-download-app-store-svg"/>
-                        <AppStoreSvg className="home-download-app-store-svg"/>
-                        <Picture className="home-download-app-store-svg last-child" src={bazaar} alt="" srcSet={null}/>
-                    </div>
-                </div>
-            </div>
+            <HomeDownload/>
 
             <HomeGuide/>
 
@@ -140,19 +123,19 @@ function HomePage()
                 <TriangleSvg className="home-download-triangle"/>
                 <div className="home-questions-title">سوالات متداول</div>
                 <HomeFaqItem title="آیا استفاده از بومینو برای ما هزینه داره؟"
-                         answer="خیر. استفاده از اپلیکیشن بومینو و کنترل استفادهٔ بچه‌ها از اینترنت هزینه‌ای نداره. بسیاری از محتواهای جذابی که معرفی می‌کنیم هم رایگان هستن."
+                             answer="خیر. استفاده از اپلیکیشن بومینو و کنترل استفادهٔ بچه‌ها از اینترنت هزینه‌ای نداره. بسیاری از محتواهای جذابی که معرفی می‌کنیم هم رایگان هستن."
                 />
                 <HomeFaqItem title="آیا بومینو روی همهٔ گوشی‌ها قابل استفاده است؟"
-                         answer="در حال حاضر بومینو روی همهٔ گوشی‌ها و تبلت‌های اندرویدی قابل استفاده است. کاربران iOS می‌تونن از نسخهٔ وب و یا از مسیر کدهای USSD اقدام کنن. البته در حال حاضر فقط می‌شه دسترسی اینترنت سیم‌کارت‌های همراه اول رو کنترل و محدود کرد."
+                             answer="در حال حاضر بومینو روی همهٔ گوشی‌ها و تبلت‌های اندرویدی قابل استفاده است. کاربران iOS می‌تونن از نسخهٔ وب و یا از مسیر کدهای USSD اقدام کنن. البته در حال حاضر فقط می‌شه دسترسی اینترنت سیم‌کارت‌های همراه اول رو کنترل و محدود کرد."
                 />
                 <HomeFaqItem title="آیا برای استفاده از بومینو، لازمه بچه‌مون گوشیِ جُدا داشته باشه؟"
-                         answer="نه؛ لازم نیست حتما گوشی و سیم‌کارت جُدا داشته باشه. شما می‌تونید گوشیِ خودتون رو در حالت تحویل به فرزند بذارید و به بچه‌تون تحویل بدید."
+                             answer="نه؛ لازم نیست حتما گوشی و سیم‌کارت جُدا داشته باشه. شما می‌تونید گوشیِ خودتون رو در حالت تحویل به فرزند بذارید و به بچه‌تون تحویل بدید."
                 />
                 <HomeFaqItem title="آیا می‌شه مصرف اینترنت wifi و adsl و ... رو هم کنترل کرد؟"
-                         answer="در حال حاضر فقط اینترنتی که با سیم‌کارت همراه اول در اختیار بچه‌تون گذاشتید رو می‌تونید کنترل کنید. به زودی در نسخه‌های بعدی کنترل بقیهٔ اینترنت‌ها هم ممکن می‌شه."
+                             answer="در حال حاضر فقط اینترنتی که با سیم‌کارت همراه اول در اختیار بچه‌تون گذاشتید رو می‌تونید کنترل کنید. به زودی در نسخه‌های بعدی کنترل بقیهٔ اینترنت‌ها هم ممکن می‌شه."
                 />
                 <HomeFaqItem title="آیا بومینو فقط برای سیم‌کارت‌های همراه اول قابل استفاده‌ست؟"
-                         answer="استفاده از قابلیت محدودکردن دسترسی بچه‌ها به محتوای مناسب ردهٔ سنی‌شون، در حال حاضر فقط برای اینترنت‌هایی که از سیم‌کارت همراه اول هستند امکان‌پذیره. به زودی کنترل بقیهٔ اینترنت‌ها هم ممکن می‌شه."
+                             answer="استفاده از قابلیت محدودکردن دسترسی بچه‌ها به محتوای مناسب ردهٔ سنی‌شون، در حال حاضر فقط برای اینترنت‌هایی که از سیم‌کارت همراه اول هستند امکان‌پذیره. به زودی کنترل بقیهٔ اینترنت‌ها هم ممکن می‌شه."
                 />
                 <div className="home-questions-download-title">همین حالا اپلیکیشن بومینو رو نصب کنید و از اینجا بچه‌تونو بفرستید اینترنت!</div>
                 <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download bigger">فعال‌سازی</Material></a>

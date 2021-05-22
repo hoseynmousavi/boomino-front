@@ -9,7 +9,8 @@ function Header(props)
     const {backgroundColor = "var(--background-color)", zIndex = "var(--header-z-index)", disableShadow} = props
     const scrollY = ScrollY()
     const defaultHeight = +(process.env.REACT_APP_HEADER_HEIGHT.replace("px", ""))
-    const height = Math.max(defaultHeight - (scrollY / 2), defaultHeight - 20)
+    const headerHeightLow = +(process.env.REACT_APP_HEADER_LOW_HEIGHT.replace("px", ""))
+    const height = Math.max(defaultHeight - (scrollY / 2), defaultHeight - headerHeightLow)
     const logoHeightMobile = Math.max(80 - (scrollY / 2), 50)
     const logoMarginMobile = Math.max(100 - scrollY, 0)
     return (
@@ -23,7 +24,7 @@ function Header(props)
                     </div>
                 </div>
                 <Material className="header-right-btn">مرورگر دورینو</Material>
-                <a href="/blog/" target="_blank" rel="noreferrer"><Material className="header-right-btn">بلاگ</Material></a>
+                <a href={process.env.REACT_APP_BLOG_LINK} target="_blank" rel="noreferrer"><Material className="header-right-btn">بلاگ</Material></a>
                 <Material className="header-right-btn">سوالات متداول</Material>
                 <Material className="header-right-btn">تماس با ما</Material>
 
