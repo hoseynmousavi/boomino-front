@@ -395,13 +395,13 @@
 
 .home-download-triangle {
   position: absolute;
-  left: 5%;
-  bottom: -65%;
+  right: 75%;
+  top: 35%;
   width: 15vw;
 
   @media screen and (max-width: 480px) {
-    width: 45vw;
-    bottom: 0;
+    width: 35vw;
+    right: 60%;
   }
 }
 
@@ -514,24 +514,7 @@
 }
 
 .home-guide {
-  margin: 20vw 0;
-  position: relative;
-  height: 1470px;
   background-color: var(--third-background-color);
-
-  @media screen and (max-width: 1000px) {
-  }
-
-  @media screen and (max-width: 480px) {
-    margin: 200px 0 150px 0;
-  }
-}
-
-.home-guide-inner {
-  height: 570px;
-  left: 0;
-  right: 0;
-
   padding: 50px var(--desktop-grid-padding);
 
   @media screen and (max-width: 1000px) {
@@ -544,14 +527,12 @@
 }
 
 .home-guide-bg {
-  position: absolute;
-  top: -250px;
-  left: 0;
-  right: 0;
   width: 100%;
+  margin-bottom: -50%;
 
-  @media screen and (max-width: 480px) {
-    top: -100px;
+  &.bottom {
+    margin-bottom: 0;
+    margin-top: -50%;
   }
 }
 
@@ -605,15 +586,6 @@
   height: 100px;
   overflow: hidden;
   transition: all ease 0.2s;
-
-  &.hide {
-    height: 0;
-    margin-bottom: 0;
-
-    @media screen and (max-width: 480px) {
-      display: none;
-    }
-  }
 
   &.disable {
     color: var(--disable-color);

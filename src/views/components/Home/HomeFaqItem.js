@@ -1,8 +1,8 @@
 import {useState, useRef} from "react"
-import PlusSvg from "../../media/svgs/PlusSvg"
-import Material from "./Material"
+import Material from "../Material"
+import PlusSvg from "../../../media/svgs/PlusSvg"
 
-function FaqItem(props)
+function HomeFaqItem(props)
 {
     const {title, answer} = props
     const answerCont = useRef(null)
@@ -26,4 +26,4 @@ function FaqItem(props)
     )
 }
 
-export default FaqItem
+export default HomeFaqItem

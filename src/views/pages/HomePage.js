@@ -12,7 +12,6 @@ import AppStoreSvg from "../../media/svgs/AppStoreSvg"
 import Picture from "../components/Picture"
 import AppBgSvg from "../../media/svgs/AppBgSvg"
 import LogoTypeSvg from "../../media/svgs/LogoTypeSvg"
-import FaqItem from "../components/FaqItem"
 import WindSvg from "../../media/svgs/WindSvg"
 import LandingDotsSvg from "../../media/svgs/LandingDotsSvg"
 import CircleSvg from "../../media/svgs/CircleSvg"
@@ -21,7 +20,9 @@ import LandingCurve2Svg from "../../media/svgs/LandingCurve2Svg"
 import LandingDots2Svg from "../../media/svgs/LandingDots2Svg"
 import PolygonSvg from "../../media/svgs/PolygonSvg"
 import Header from "../containers/Header"
-import HomeGuide from "../containers/HomeGuide"
+import TriangleSvg from "../../media/svgs/TriangleSvg"
+import HomeFaqItem from "../components/Home/HomeFaqItem"
+import HomeGuide from "../containers/Home/HomeGuide"
 
 function HomePage()
 {
@@ -136,20 +137,21 @@ function HomePage()
 
             <div className="home-questions">
                 <PolygonSvg className="home-questions-polygon"/>
+                <TriangleSvg className="home-download-triangle"/>
                 <div className="home-questions-title">سوالات متداول</div>
-                <FaqItem title="آیا استفاده از بومینو برای ما هزینه داره؟"
+                <HomeFaqItem title="آیا استفاده از بومینو برای ما هزینه داره؟"
                          answer="خیر. استفاده از اپلیکیشن بومینو و کنترل استفادهٔ بچه‌ها از اینترنت هزینه‌ای نداره. بسیاری از محتواهای جذابی که معرفی می‌کنیم هم رایگان هستن."
                 />
-                <FaqItem title="آیا بومینو روی همهٔ گوشی‌ها قابل استفاده است؟"
+                <HomeFaqItem title="آیا بومینو روی همهٔ گوشی‌ها قابل استفاده است؟"
                          answer="در حال حاضر بومینو روی همهٔ گوشی‌ها و تبلت‌های اندرویدی قابل استفاده است. کاربران iOS می‌تونن از نسخهٔ وب و یا از مسیر کدهای USSD اقدام کنن. البته در حال حاضر فقط می‌شه دسترسی اینترنت سیم‌کارت‌های همراه اول رو کنترل و محدود کرد."
                 />
-                <FaqItem title="آیا برای استفاده از بومینو، لازمه بچه‌مون گوشیِ جُدا داشته باشه؟"
+                <HomeFaqItem title="آیا برای استفاده از بومینو، لازمه بچه‌مون گوشیِ جُدا داشته باشه؟"
                          answer="نه؛ لازم نیست حتما گوشی و سیم‌کارت جُدا داشته باشه. شما می‌تونید گوشیِ خودتون رو در حالت تحویل به فرزند بذارید و به بچه‌تون تحویل بدید."
                 />
-                <FaqItem title="آیا می‌شه مصرف اینترنت wifi و adsl و ... رو هم کنترل کرد؟"
+                <HomeFaqItem title="آیا می‌شه مصرف اینترنت wifi و adsl و ... رو هم کنترل کرد؟"
                          answer="در حال حاضر فقط اینترنتی که با سیم‌کارت همراه اول در اختیار بچه‌تون گذاشتید رو می‌تونید کنترل کنید. به زودی در نسخه‌های بعدی کنترل بقیهٔ اینترنت‌ها هم ممکن می‌شه."
                 />
-                <FaqItem title="آیا بومینو فقط برای سیم‌کارت‌های همراه اول قابل استفاده‌ست؟"
+                <HomeFaqItem title="آیا بومینو فقط برای سیم‌کارت‌های همراه اول قابل استفاده‌ست؟"
                          answer="استفاده از قابلیت محدودکردن دسترسی بچه‌ها به محتوای مناسب ردهٔ سنی‌شون، در حال حاضر فقط برای اینترنت‌هایی که از سیم‌کارت همراه اول هستند امکان‌پذیره. به زودی کنترل بقیهٔ اینترنت‌ها هم ممکن می‌شه."
                 />
                 <div className="home-questions-download-title">همین حالا اپلیکیشن بومینو رو نصب کنید و از اینجا بچه‌تونو بفرستید اینترنت!</div>
