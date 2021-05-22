@@ -280,6 +280,14 @@
     padding: 50px var(--mobile-grid-padding);
     flex-wrap: wrap;
   }
+
+  &.margin-bottom {
+    margin-bottom: -150px;
+
+    @media screen and (max-width: 480px) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .home-second-title {
@@ -364,18 +372,18 @@
 .home-download-app {
   position: relative;
   padding: 50px;
-  margin: 250px var(--desktop-grid-padding) 50px var(--desktop-grid-padding);
+  margin: 250px var(--desktop-grid-padding) 100px var(--desktop-grid-padding);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 
   @media screen and (max-width: 1000px) {
     padding: 30px;
-    margin: 250px var(--tablet-grid-padding) 50px var(--tablet-grid-padding);
+    margin: 250px var(--tablet-grid-padding) 100px var(--tablet-grid-padding);
   }
 
   @media screen and (max-width: 480px) {
-    margin: 50px var(--mobile-grid-padding) 50px var(--mobile-grid-padding);
+    margin: 100px var(--mobile-grid-padding) 100px var(--mobile-grid-padding);
     flex-wrap: wrap;
     padding: 0;
     background-color: var(--second-background-color);
@@ -405,22 +413,18 @@
   }
 }
 
-.home-download-app-svg {
+.home-download-app-svg-cont {
   width: 200px;
   min-width: 200px;
-  margin-top: -200px;
-  margin-left: 30px;
-  margin-right: 25px;
-
-  @media screen and (max-width: 1200px) {
-    width: 200px;
-    min-width: 200px;
-    margin-top: -150px;
-  }
 
   @media screen and (max-width: 480px) {
     display: none;
   }
+}
+
+.home-download-app-svg {
+  width: 100%;
+  display: block;
 }
 
 .home-download-app-content {

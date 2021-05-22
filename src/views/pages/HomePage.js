@@ -98,7 +98,7 @@ function HomePage()
                 <img loading="lazy" className="home-first-first-design" src={thirdDesign} alt=""/>
             </div>
 
-            <div className="home-second-section">
+            <div className="home-second-section margin-bottom">
                 <WindSvg className="home-second-wind rotated"/>
                 <LandingCurveSvg className="home-second-curve"/>
                 <img loading="lazy" className="home-first-first-design" src={forthDesign} alt=""/>
