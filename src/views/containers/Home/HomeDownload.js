@@ -55,7 +55,7 @@ function HomeDownload()
                 scrollY + 250 - headerHeight / 2 <= thirdTop?.current ?
                     2
                     :
-                    scrollY + 250 - headerHeight / 2 <= forthTop?.current + 100 ?
+                    scrollY + 250 - headerHeight / 2 <= forthTop?.current ?
                         3
                         :
                         4
