@@ -15,9 +15,9 @@ import GuideBgSvg from "../../../media/svgs/GuideBgSvg"
 
 function HomeDownload()
 {
-    let guideTop = useRef(null)
     const guideRef = document.getElementById("home-guide")
-
+    let guideTop = useRef(null)
+    let guideHeight = useRef(null)
     const firstRef = useRef(null)
     const secondRef = useRef(null)
     const thirdRef = useRef(null)
@@ -26,50 +26,47 @@ function HomeDownload()
     const secondTop = useRef(null)
     const thirdTop = useRef(null)
     const forthTop = useRef(null)
+    let phoneTop = useRef(null)
+    let phoneHeight = useRef(null)
+    const phoneRef = useRef(null)
     if (
         guideRef && !guideTop.current &&
         firstRef.current && !firstTop.current &&
         secondRef.current && !secondTop.current &&
         thirdRef.current && !thirdTop.current &&
-        forthRef.current && !forthTop.current
+        forthRef.current && !forthTop.current &&
+        phoneRef.current && !phoneTop.current
     )
     {
         guideTop.current = guideRef.offsetTop
+        guideHeight.current = guideRef.scrollHeight
         firstTop.current = firstRef.current.offsetTop
         secondTop.current = secondRef.current.offsetTop
         thirdTop.current = thirdRef.current.offsetTop
         forthTop.current = forthRef.current.offsetTop
+        phoneTop.current = phoneRef.current.offsetTop
+        phoneHeight.current = phoneRef.current.scrollHeight
     }
     const scrollY = ScrollY()
     const {clientWidth} = Resize()
-    const headerHeight = +(process.env.REACT_APP_HEADER_HEIGHT.replace("px", "")) - +(process.env.REACT_APP_HEADER_LOW_HEIGHT.replace("px", ""))
-    const guideLevel = scrollY + 250 - headerHeight / 2 <= firstTop?.current - (clientWidth > 480 ? 5000 : 350) ?
+    const headerHeight = process.env.REACT_APP_HEADER_HEIGHT.replace("px", "") - process.env.REACT_APP_HEADER_LOW_HEIGHT.replace("px", "")
+    const guideLevel = scrollY + headerHeight <= firstTop?.current - (clientWidth > 480 ? 5000 : 350) ?
         -1
         :
-        scrollY + 250 - headerHeight / 2 <= firstTop?.current ?
+        scrollY + headerHeight <= firstTop?.current ?
             0
             :
-            scrollY + 250 - headerHeight / 2 <= secondTop?.current ?
+            scrollY + headerHeight <= secondTop?.current ?
                 1
                 :
-                scrollY + 250 - headerHeight / 2 <= thirdTop?.current ?
+                scrollY + headerHeight <= thirdTop?.current ?
                     2
                     :
-                    scrollY + 250 - headerHeight / 2 <= forthTop?.current ?
+                    scrollY + headerHeight <= forthTop?.current ?
                         3
                         :
                         4
 
-    let guideHeight = useRef(null)
-    let phoneTop = useRef(null)
-    let phoneHeight = useRef(null)
-    const phoneRef = useRef(null)
-    if (guideRef && phoneRef.current && !phoneTop.current)
-    {
-        guideHeight.current = guideRef.scrollHeight
-        phoneTop.current = phoneRef.current.offsetTop
-        phoneHeight.current = phoneRef.current.scrollHeight
-    }
     const reduceScrollMargin = 300
     const defaultWidth = 200
     const widthMargin = clientWidth > 1000 ? 80 : 0
@@ -78,8 +75,8 @@ function HomeDownload()
     const top = window.innerHeight / 2 + headerHeight / 2 - phoneHeight.current / 2
     const maxMargin = guideTop.current - phoneTop.current - reduceScrollMargin
     const margin = Math.min(Math.max(0, scrollY + top - phoneTop.current), maxMargin)
-    const widthSource = (margin / (maxMargin / widthMargin))
-    const heightSource = (margin / (maxMargin / heightMargin))
+    const widthSource = (margin / maxMargin) / widthMargin
+    const heightSource = (margin / maxMargin) / heightMargin
     const width = defaultWidth + widthSource + "px"
     const padding = clientWidth > 1000 ? process.env.REACT_APP_DESKTOP_GRID_PADDING.replace("%", "vw") : process.env.REACT_APP_TABLET_GRID_PADDING.replace("%", "vw")
     const transform = `translate3d(
@@ -95,7 +92,7 @@ function HomeDownload()
     const imgHeight = `calc(100% - 50px + ${heightSource}px)`
     const paddingFrame = clientWidth > 480 ? 50 : 30
     const transformSlide = `translate3d(0,-${guideLevel === 0 ? 0 : guideLevel === 1 ? defaultHeight + heightMargin - paddingFrame : guideLevel === 2 ? 2 * (defaultHeight + heightMargin - paddingFrame) : 3 * (defaultHeight + heightMargin - paddingFrame)}px,0)`
-    const imagesScroll = Math.max(0, Math.min(scrollY + 400 - headerHeight / 2 - firstTop?.current, 3 * (defaultHeight + heightMargin - paddingFrame)))
+    const imagesScroll = Math.max(0, Math.min(scrollY + headerHeight - firstTop?.current + ((secondTop?.current - firstTop?.current) / 2), 3 * (defaultHeight + heightMargin - paddingFrame)))
     const transformSlideMobile = `translate3d(0,-${imagesScroll}px,0)`
     return (
         <>
