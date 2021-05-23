@@ -95,7 +95,7 @@ function HomeDownload()
     const imgHeight = `calc(100% - 50px + ${heightRange}px)`
     const paddingFrame = clientWidth > 480 ? 50 : 30
     const transformSlide = `translate3d(0,-${guideLevel === 0 ? 0 : guideLevel === 1 ? defaultHeight + heightMargin - paddingFrame : guideLevel === 2 ? 2 * (defaultHeight + heightMargin - paddingFrame) : 3 * (defaultHeight + heightMargin - paddingFrame)}px,0)`
-    const imagesScroll = Math.max(0, Math.min(scrollY + headerHeight - firstTop?.current + ((secondTop?.current - firstTop?.current) / 2), 3 * (defaultHeight + heightMargin - paddingFrame)))
+    const imagesScroll = Math.max(0, Math.min(scrollY + headerHeight - firstTop?.current + 150, 3 * (defaultHeight + heightMargin - paddingFrame)))
     const transformSlideMobile = `translate3d(0,-${imagesScroll}px,0)`
     return (
         <>
@@ -145,7 +145,7 @@ function HomeDownload()
                             <div>با خیال راحت گوشی رو به فرزندتون بدید. اینجا کلی<br className="title-none"/>ابزار و محتوای جذاب رو هم بهش معرفی می‌کنیم.</div>
                         </div>
                     </div>
-                    <div className={`home-guide-dot-cont ${guideLevel === 4 ? "hide" : ""}`}>
+                    <div className={`home-guide-dot-cont ${guideLevel === 4 || scrollY + headerHeight - guideTop.current < 0 ? "hide" : ""}`}>
                         <div className={`home-guide-dot ${guideLevel === 0 ? "" : "disable"}`}/>
                         <div className={`home-guide-dot ${guideLevel === 1 ? "" : "disable"}`}/>
                         <div className={`home-guide-dot ${guideLevel === 2 ? "" : "disable"}`}/>
