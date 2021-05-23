@@ -38,14 +38,17 @@ function HomeDownload()
         phoneRef.current && !phoneTop.current
     )
     {
-        guideTop.current = guideRef.offsetTop
-        guideHeight.current = guideRef.scrollHeight
-        firstTop.current = firstRef.current.offsetTop
-        secondTop.current = secondRef.current.offsetTop
-        thirdTop.current = thirdRef.current.offsetTop
-        forthTop.current = forthRef.current.offsetTop
-        phoneTop.current = phoneRef.current.offsetTop
-        phoneHeight.current = phoneRef.current.scrollHeight
+        setTimeout(() =>
+        {
+            guideTop.current = guideRef.offsetTop
+            guideHeight.current = guideRef.scrollHeight
+            firstTop.current = firstRef.current.offsetTop
+            secondTop.current = secondRef.current.offsetTop
+            thirdTop.current = thirdRef.current.offsetTop
+            forthTop.current = forthRef.current.offsetTop
+            phoneTop.current = phoneRef.current.offsetTop
+            phoneHeight.current = phoneRef.current.scrollHeight
+        }, 500)
     }
     const scrollY = ScrollY()
     const {clientWidth} = Resize()
@@ -75,21 +78,21 @@ function HomeDownload()
     const top = window.innerHeight / 2 + headerHeight / 2 - phoneHeight.current / 2
     const maxMargin = guideTop.current - phoneTop.current - reduceScrollMargin
     const margin = Math.min(Math.max(0, scrollY + top - phoneTop.current), maxMargin)
-    const widthSource = (margin / maxMargin) / widthMargin
-    const heightSource = (margin / maxMargin) / heightMargin
-    const width = defaultWidth + widthSource + "px"
+    const widthRange = margin / (maxMargin / widthMargin)
+    const heightRange = margin / (maxMargin / heightMargin)
+    const width = defaultWidth + widthRange + "px"
     const padding = clientWidth > 1000 ? process.env.REACT_APP_DESKTOP_GRID_PADDING.replace("%", "vw") : process.env.REACT_APP_TABLET_GRID_PADDING.replace("%", "vw")
     const transform = `translate3d(
     calc((-100vw + 2 * (${padding}) + ${width} + 50px) * ${margin / (maxMargin)}),
     ${
         scrollY + window.innerHeight / 2 + headerHeight / 2 >= guideTop.current + guideHeight.current ?
-            guideTop.current + guideHeight.current - (scrollY + window.innerHeight / 2 + headerHeight / 2 + heightSource / 2)
+            guideTop.current + guideHeight.current - (scrollY + window.innerHeight / 2 + headerHeight / 2 + heightRange / 2)
             :
-            -heightSource / 2
+            -heightRange / 2
     }px,
     0
     )`
-    const imgHeight = `calc(100% - 50px + ${heightSource}px)`
+    const imgHeight = `calc(100% - 50px + ${heightRange}px)`
     const paddingFrame = clientWidth > 480 ? 50 : 30
     const transformSlide = `translate3d(0,-${guideLevel === 0 ? 0 : guideLevel === 1 ? defaultHeight + heightMargin - paddingFrame : guideLevel === 2 ? 2 * (defaultHeight + heightMargin - paddingFrame) : 3 * (defaultHeight + heightMargin - paddingFrame)}px,0)`
     const imagesScroll = Math.max(0, Math.min(scrollY + headerHeight - firstTop?.current + ((secondTop?.current - firstTop?.current) / 2), 3 * (defaultHeight + heightMargin - paddingFrame)))
@@ -142,7 +145,7 @@ function HomeDownload()
                             <div>با خیال راحت گوشی رو به فرزندتون بدید. اینجا کلی<br className="title-none"/>ابزار و محتوای جذاب رو هم بهش معرفی می‌کنیم.</div>
                         </div>
                     </div>
-                    <div className={`home-guide-dot-cont ${guideLevel === 4 || scrollY - headerHeight - guideTop.current < -100 ? "hide" : ""}`}>
+                    <div className={`home-guide-dot-cont ${guideLevel === 4 ? "hide" : ""}`}>
                         <div className={`home-guide-dot ${guideLevel === 0 ? "" : "disable"}`}/>
                         <div className={`home-guide-dot ${guideLevel === 1 ? "" : "disable"}`}/>
                         <div className={`home-guide-dot ${guideLevel === 2 ? "" : "disable"}`}/>
