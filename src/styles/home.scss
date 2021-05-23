@@ -125,9 +125,9 @@
   width: 60%;
 
   @media screen and (max-width: 480px) {
-    width: 150%;
+    width: 80%;
     top: 50%;
-    left: -50%;
+    left: 0;
   }
 }
 
@@ -662,6 +662,13 @@
 .home-guide-content-text {
   @media screen and (max-width: 480px) {
     order: 2;
+    height: 3000px;
+    transition: all ease 0.2s;
+
+    &.hide-height {
+      height: 1800px;
+      transition: all ease 0.2s 0.2s;
+    }
   }
 }
 
@@ -682,13 +689,52 @@
   @media screen and (max-width: 480px) {
     text-align: center;
     position: sticky;
-    top: calc(var(--header-height) + 440px);
-    margin-top: 15px;
-    white-space: nowrap;
+    height: 90px;
+    transition: all ease 0.4s;
 
-    &.disable {
-      transform: scale(0);
+    &.first {
+      margin-top: 50px;
+      top: calc(var(--header-height) + 55px + 357px + 50px);
+
+      &.disable {
+        transform: scale(0);
+      }
     }
+
+    &.second {
+      top: calc(var(--header-height) + 55px + 357px + 50px + 90px + 300px);
+      transform: translateY(calc(-90px - 300px));
+
+      &.disable {
+        transform: translateY(calc(-90px - 300px)) scale(0);
+      }
+    }
+
+    &.third {
+      top: calc(var(--header-height) + 55px + 357px + 50px + 90px + 300px + 90px + 300px);
+      transform: translateY(calc(-90px - 300px - 90px - 300px));
+
+      &.disable {
+        transform: translateY(calc(-90px - 300px - 90px - 300px)) scale(0);
+      }
+    }
+
+    &.last {
+      top: calc(var(--header-height) + 55px + 357px + 50px + 90px + 300px + 90px + 300px + 90px + 300px);
+      transform: translateY(calc(-90px - 300px - 90px - 300px - 90px - 300px));
+
+      &.disable {
+        transform: translateY(calc(-90px - 300px - 90px - 300px - 90px - 300px)) scale(0);
+      }
+    }
+  }
+}
+
+.title-none {
+  display: block;
+
+  @media screen and (max-width: 480px) {
+    display: none;
   }
 }
 
@@ -716,17 +762,7 @@
     top: calc(var(--header-height) + 55px);
     display: block;
     width: 200px;
-  }
-}
-
-.home-guide-img-space {
-  display: none;
-
-  @media screen and (max-width: 480px) {
-    display: block;
-    height: 500px;
-    min-width: 100%;
-    order: 3;
+    min-width: 200px;
   }
 }
 

@@ -33,7 +33,7 @@ function HomePage()
                     <div className="home-first-title">از اینجا بچه‌تونو بفرستید اینترنت!</div>
                     <div className="home-first-desc">
                         بومینو دسترسی بچه‌ها رو به اینترنت
-                        متناسب با ردهٔ سنی اون‌ها محدود می‌کنه
+                        متناسب با ردهٔ سنی اون‌ها مدیریت می‌کنه
                         و با کلّی محتوای مناسب و جذّاب سرگرمشون می‌کنه
                     </div>
                     <div className="home-first-desktop-section">

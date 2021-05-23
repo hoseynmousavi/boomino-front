@@ -41,20 +41,24 @@ function HomeDownload()
         forthTop.current = forthRef.current.offsetTop
     }
     const scrollY = ScrollY()
+    const {clientWidth} = Resize()
     const headerHeight = +(process.env.REACT_APP_HEADER_HEIGHT.replace("px", "")) - +(process.env.REACT_APP_HEADER_LOW_HEIGHT.replace("px", ""))
-    const guideLevel = scrollY + 250 - headerHeight / 2 <= firstTop?.current ?
-        0
+    const guideLevel = scrollY + 250 - headerHeight / 2 <= firstTop?.current - (clientWidth > 480 ? 5000 : 350) ?
+        -1
         :
-        scrollY + 250 - headerHeight / 2 <= secondTop?.current ?
-            1
+        scrollY + 250 - headerHeight / 2 <= firstTop?.current ?
+            0
             :
-            scrollY + 250 - headerHeight / 2 <= thirdTop?.current ?
-                2
+            scrollY + 250 - headerHeight / 2 <= secondTop?.current ?
+                1
                 :
-                scrollY + 250 - headerHeight / 2 <= forthTop?.current + 100 ?
-                    3
+                scrollY + 250 - headerHeight / 2 <= thirdTop?.current ?
+                    2
                     :
-                    -1
+                    scrollY + 250 - headerHeight / 2 <= forthTop?.current + 100 ?
+                        3
+                        :
+                        4
 
     let guideHeight = useRef(null)
     let phoneTop = useRef(null)
@@ -66,7 +70,6 @@ function HomeDownload()
         phoneTop.current = phoneRef.current.offsetTop
         phoneHeight.current = phoneRef.current.scrollHeight
     }
-    const {clientWidth} = Resize()
     const reduceScrollMargin = 300
     const defaultWidth = 200
     const widthMargin = clientWidth > 1000 ? 80 : 0
@@ -92,7 +95,7 @@ function HomeDownload()
     const imgHeight = `calc(100% - 50px + ${heightSource}px)`
     const paddingFrame = clientWidth > 480 ? 50 : 30
     const transformSlide = `translate3d(0,-${guideLevel === 0 ? 0 : guideLevel === 1 ? defaultHeight + heightMargin - paddingFrame : guideLevel === 2 ? 2 * (defaultHeight + heightMargin - paddingFrame) : 3 * (defaultHeight + heightMargin - paddingFrame)}px,0)`
-    const imagesScroll = Math.max(0, Math.min(scrollY + 250 - headerHeight / 2 - firstTop?.current, 3 * (defaultHeight + heightMargin - paddingFrame)))
+    const imagesScroll = Math.max(0, Math.min(scrollY + 400 - headerHeight / 2 - firstTop?.current, 3 * (defaultHeight + heightMargin - paddingFrame)))
     const transformSlideMobile = `translate3d(0,-${imagesScroll}px,0)`
     return (
         <>
@@ -122,28 +125,27 @@ function HomeDownload()
 
             <GuideBgSvg className="home-guide-bg"/>
             <div className="home-guide" id="home-guide">
-                <div className={`home-guide-title ${guideLevel === -1 ? "hide" : ""}`}>چطور از بومینو استفاده کنم؟</div>
+                <div className={`home-guide-title ${guideLevel === 4 ? "hide" : ""}`}>چطور از بومینو استفاده کنم؟</div>
                 <div className="home-guide-content">
-                    <div className="home-guide-content-text">
+                    <div className={`home-guide-content-text ${guideLevel === 4 ? "hide-height" : ""}`}>
                         <div className={`home-guide-item first ${guideLevel === 0 ? "" : "disable"}`} ref={firstRef}>
                             <div className={`home-guide-item-title ${guideLevel === 0 ? "" : "disable"}`}>۱. دانلود و نصب</div>
                             <div>ابتدا اپلیکیشن را دانلود<br/>و نصب کنید.</div>
                         </div>
-                        <div className={`home-guide-item ${guideLevel === 1 ? "" : "disable"}`} ref={secondRef}>
+                        <div className={`home-guide-item second ${guideLevel === 1 ? "" : "disable"}`} ref={secondRef}>
                             <div className={`home-guide-item-title ${guideLevel === 1 ? "" : "disable"}`}>۲. ساخت پروفایل</div>
                             <div>بعد ثبت‌نام، برای فرزند یا فرزندانتون<br/>پروفایل بسازید.</div>
                         </div>
-                        <div className={`home-guide-item ${guideLevel === 2 ? "" : "disable"}`} ref={thirdRef}>
+                        <div className={`home-guide-item third ${guideLevel === 2 ? "" : "disable"}`} ref={thirdRef}>
                             <div className={`home-guide-item-title ${guideLevel === 2 ? "" : "disable"}`}>۳. انتخاب دسترسی به اینترنت</div>
                             <div>سپس می‌تونید یکی از بسته‌های مناسب<br/>ردهٔ سنی فرزندتون رو انتخاب کنید.</div>
                         </div>
                         <div className={`home-guide-item last ${guideLevel === 3 ? "" : "disable"}`} ref={forthRef}>
                             <div className={`home-guide-item-title ${guideLevel === 3 ? "" : "disable"}`}>۴. بچه‌تونو بفرستید اینترنت</div>
-                            <div>با خیال راحت گوشی رو به فرزندتون بدید. اینجا کلی<br/>ابزار و محتوای جذاب رو هم بهش معرفی می‌کنیم.</div>
+                            <div>با خیال راحت گوشی رو به فرزندتون بدید. اینجا کلی<br className="title-none"/>ابزار و محتوای جذاب رو هم بهش معرفی می‌کنیم.</div>
                         </div>
-                        <div className="home-guide-img-space"/>
                     </div>
-                    <div className={`home-guide-dot-cont ${guideLevel === -1 || scrollY - headerHeight - guideTop.current < -100 ? "hide" : ""}`}>
+                    <div className={`home-guide-dot-cont ${guideLevel === 4 || scrollY - headerHeight - guideTop.current < -100 ? "hide" : ""}`}>
                         <div className={`home-guide-dot ${guideLevel === 0 ? "" : "disable"}`}/>
                         <div className={`home-guide-dot ${guideLevel === 1 ? "" : "disable"}`}/>
                         <div className={`home-guide-dot ${guideLevel === 2 ? "" : "disable"}`}/>
