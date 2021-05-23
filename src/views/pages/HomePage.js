@@ -16,7 +16,6 @@ import PolygonSvg from "../../media/svgs/PolygonSvg"
 import Header from "../containers/Header"
 import TriangleSvg from "../../media/svgs/TriangleSvg"
 import HomeFaqItem from "../components/Home/HomeFaqItem"
-import HomeGuide from "../containers/Home/HomeGuide"
 import HomeDownload from "../containers/Home/HomeDownload"
 
 function HomePage()
@@ -115,8 +114,6 @@ function HomePage()
             </div>
 
             <HomeDownload/>
-
-            <HomeGuide/>
 
             <div className="home-questions">
                 <PolygonSvg className="home-questions-polygon"/>
