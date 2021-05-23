@@ -372,7 +372,6 @@
 .home-download-app {
   @media screen and (min-width: 480px) {
     position: sticky;
-    top: calc(50% - var(--header-height) - var(--header-low-height) - 50px);
   }
   padding: 0 50px 50px 50px;
   margin: 250px var(--desktop-grid-padding) 100px var(--desktop-grid-padding);
@@ -424,6 +423,8 @@
 }
 
 .home-download-app-svg-cont {
+  height: 357px;
+  max-height: 357px;
   width: 200px;
   min-width: 200px;
   position: relative;
@@ -436,6 +437,30 @@
 .home-download-app-svg {
   width: 100%;
   display: block;
+}
+
+.home-download-app-img {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  width: calc(100% - 50px);
+  overflow: hidden;
+  border-radius: 25px;
+  transform: perspective(0);
+}
+
+.home-download-app-img-item-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.home-download-app-img-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid var(--first-color);
+  border-radius: 25px;
 }
 
 .home-download-app-content {
@@ -611,7 +636,7 @@
 .home-guide-item {
   font-size: var(--big-font);
   text-align: right;
-  margin-bottom: 550px;
+  margin-bottom: 400px;
   transition: all ease 0.2s;
 
   &.disable {
@@ -679,9 +704,9 @@
 }
 
 .home-guide-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+  width: 6px;
+  height: 25px;
+  border-radius: 5px;
   margin: 25px 5px;
   background-color: var(--first-color);
   transition: opacity ease 0.2s;
