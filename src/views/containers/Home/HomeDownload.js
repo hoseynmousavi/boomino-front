@@ -30,6 +30,7 @@ function HomeDownload()
     let phoneHeight = useRef(null)
     const phoneRef = useRef(null)
     if (
+        (document.readyState === "complete" || document.readyState === "loaded") &&
         guideRef && !guideTop.current &&
         firstRef.current && !firstTop.current &&
         secondRef.current && !secondTop.current &&
@@ -38,17 +39,14 @@ function HomeDownload()
         phoneRef.current && !phoneTop.current
     )
     {
-        setTimeout(() =>
-        {
-            guideTop.current = guideRef.offsetTop
-            guideHeight.current = guideRef.scrollHeight
-            firstTop.current = firstRef.current.offsetTop
-            secondTop.current = secondRef.current.offsetTop
-            thirdTop.current = thirdRef.current.offsetTop
-            forthTop.current = forthRef.current.offsetTop
-            phoneTop.current = phoneRef.current.offsetTop
-            phoneHeight.current = phoneRef.current.scrollHeight
-        }, 500)
+        guideTop.current = guideRef.offsetTop
+        guideHeight.current = guideRef.scrollHeight
+        firstTop.current = firstRef.current.offsetTop
+        secondTop.current = secondRef.current.offsetTop
+        thirdTop.current = thirdRef.current.offsetTop
+        forthTop.current = forthRef.current.offsetTop
+        phoneTop.current = phoneRef.current.offsetTop
+        phoneHeight.current = phoneRef.current.scrollHeight
     }
     const scrollY = ScrollY()
     const {clientWidth} = Resize()
@@ -99,7 +97,7 @@ function HomeDownload()
     const transformSlideMobile = `translate3d(0,-${imagesScroll}px,0)`
     return (
         <>
-            <div className="home-download-app" style={{top}} ref={phoneRef}>
+            <div className={`home-download-app ${margin > 0 ? "inactive" : ""}`} style={{top}} ref={phoneRef}>
                 <AppBgSvg className={`home-download-app-bg ${margin > 0 ? "hide" : ""}`}/>
                 <div className="home-download-app-svg-cont" style={{transform, width, minWidth: width}}>
                     <MobileFrame className="home-download-app-svg"/>

@@ -389,6 +389,10 @@
     padding: 0;
     background-color: var(--second-background-color);
   }
+
+  &.inactive {
+    pointer-events: none;
+  }
 }
 
 .home-download-app-bg {
