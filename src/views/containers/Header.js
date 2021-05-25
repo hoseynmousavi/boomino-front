@@ -1,3 +1,4 @@
+import {memo} from "react"
 import Material from "../components/Material"
 import ScrollY from "../../helpers/ScrollY"
 import LogoSvg from "../../media/svgs/LogoSvg"
@@ -46,4 +47,4 @@ Header.propTypes = {
     disableShadow: PropTypes.bool,
 }
 
-export default Header
+export default memo(Header)
