@@ -13,6 +13,7 @@
   right: 0;
   left: 0;
   text-align: center;
+  pointer-events: all;
   transition: box-shadow ease 0.2s;
 
   @media screen and (min-width: 480px) {
