@@ -63,7 +63,7 @@ function HomePage()
                 <WindSvg className="home-second-wind-right"/>
                 <CircleSvg className="home-second-circle"/>
                 <LandingCurve2Svg className="home-second-curve"/>
-                <img loading="lazy" className="home-first-first-design" src={secondDesign} alt=""/>
+                <img className="home-first-first-design" src={secondDesign} alt=""/>
                 <div className="home-second-left">
                     <div className="home-second-title">بچه‌ها چقدر تو گوشی هستن و چیا می‌بینن؟</div>
                     <div className="home-second-desc">
@@ -94,13 +94,13 @@ function HomePage()
                     <div className="home-second-more">بیشتر بدونیم</div>
                     <a href={process.env.REACT_APP_APK_LINK} download><Material className="home-first-download">فعال‌سازی</Material></a>
                 </div>
-                <img loading="lazy" className="home-first-first-design" src={thirdDesign} alt=""/>
+                <img className="home-first-first-design" src={thirdDesign} alt=""/>
             </div>
 
             <div className="home-second-section margin-bottom">
                 <WindSvg className="home-second-wind rotated"/>
                 <LandingCurveSvg className="home-second-curve"/>
-                <img loading="lazy" className="home-first-first-design" src={forthDesign} alt=""/>
+                <img className="home-first-first-design" src={forthDesign} alt=""/>
                 <div className="home-second-left">
                     <div className="home-second-title">کلی محتوای جذاب توی بومینو پیدا کنید</div>
                     <div className="home-second-desc">
