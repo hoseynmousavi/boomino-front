@@ -109,8 +109,8 @@ function Material(props)
         <div id={id}
              ref={container}
              onContextMenu={onContext}
-             style={style ? style : {}}
-             className={className ? "material " + className : "material"}
+             style={style || {}}
+             className={`material ${className}`}
              onMouseDown={onMouseDown}
              onMouseUp={handleButtonRelease}
              onMouseLeave={handleLeave}
