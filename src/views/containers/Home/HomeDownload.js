@@ -39,14 +39,18 @@ function HomeDownload()
         phoneRef.current && !phoneTop.current
     )
     {
-        guideTop.current = guideRef.offsetTop
-        guideHeight.current = guideRef.scrollHeight
-        firstTop.current = firstRef.current.offsetTop
-        secondTop.current = secondRef.current.offsetTop
-        thirdTop.current = thirdRef.current.offsetTop
-        forthTop.current = forthRef.current.offsetTop
-        phoneTop.current = phoneRef.current.offsetTop
-        phoneHeight.current = phoneRef.current.scrollHeight
+        setTimeout(() =>
+        {
+            guideTop.current = guideRef.offsetTop
+            guideHeight.current = guideRef.scrollHeight
+            firstTop.current = firstRef.current.offsetTop
+            secondTop.current = secondRef.current.offsetTop
+            thirdTop.current = thirdRef.current.offsetTop
+            forthTop.current = forthRef.current.offsetTop
+            phoneTop.current = phoneRef.current.offsetTop
+            phoneHeight.current = phoneRef.current.scrollHeight
+            alert("READY")
+        }, 2000)
     }
     const scrollY = ScrollY()
     const {clientWidth} = Resize()
