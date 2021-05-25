@@ -13,6 +13,7 @@ function HomeFaqItem(props)
         if (height === "0") setHeight(answerCont.current.scrollHeight + "px")
         else setHeight("0")
     }
+
     return (
         <div className="home-questions-item-cont">
             <Material className={`home-questions-item ${height !== "0" ? "open" : ""}`} onClick={toggleAnswer}>

@@ -32,18 +32,18 @@
     }
 }
 
-.rippleSlow {
+.ripple-slow {
     position: absolute;
     background: var(--material-color);
     border-radius: 100%;
     transform: scale(2);
     pointer-events: none;
-    animation: rippleSlow 1s ease;
+    animation: ripple-slow 1s ease;
     transition: all ease 0.4s;
     will-change: transform;
 }
 
-@keyframes rippleSlow {
+@keyframes ripple-slow {
     from {
         transform: scale(0);
     }
