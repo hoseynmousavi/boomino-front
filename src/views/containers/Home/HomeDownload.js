@@ -143,7 +143,7 @@ function HomeDownload()
                             <div>با خیال راحت گوشی رو به فرزندتون بدید. اینجا کلی<br className="title-none"/>ابزار و محتوای جذاب رو هم بهش معرفی می‌کنیم.</div>
                         </div>
                     </div>
-                    <div className={`home-guide-dot-cont ${guideLevel === 4 || scrollY + headerHeight - guideTop.current < 0 ? "hide" : ""}`}>
+                    <div className="home-guide-dot-cont">
                         <div className={`home-guide-dot ${guideLevel === 0 ? "" : "disable"}`}/>
                         <div className={`home-guide-dot ${guideLevel === 1 ? "" : "disable"}`}/>
                         <div className={`home-guide-dot ${guideLevel === 2 ? "" : "disable"}`}/>
@@ -152,7 +152,7 @@ function HomeDownload()
                     <div className="home-guide-img">
                         <MobileFrame className="home-download-app-svg"/>
                         <div className="home-download-app-img">
-                            <div className="home-download-app-img-item-slide" style={{transform: transformSlideMobile}}>
+                            <div className="home-download-app-img-item-slide mobile" style={{transform: transformSlideMobile}}>
                                 <img src={intro1} className="home-download-app-img-item" alt=""/>
                                 <img src={intro2} className="home-download-app-img-item" alt=""/>
                                 <img src={intro3} className="home-download-app-img-item" alt=""/>
