@@ -1,5 +1,6 @@
 #!/bin/bash
-rm build/*.js.map && rm build/static/js/*.map && rm build/static/css/*.map && gzip -r build/static/js && gzip -r build/static/css &&
+rm build/*.js.map && rm build/static/js/*.map && rm build/static/css/*.map && 
+# gzip -r build/static/js && gzip -r build/static/css &&
 source .env &&
 sed -i "s~NAME~$REACT_APP_NAME~g" build/index.html &&
 sed -i "s~DESCRIPTION~$REACT_APP_DESCRIPTION~g" build/index.html &&
