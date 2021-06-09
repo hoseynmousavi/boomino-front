@@ -115,7 +115,7 @@ function HomePage()
 
             <HomeDownload/>
 
-            <div className="home-questions">
+            <div className="home-questions" id="home-questions">
                 <PolygonSvg className="home-questions-polygon"/>
                 <TriangleSvg className="home-download-triangle"/>
                 <div className="home-questions-title">سوالات متداول</div>

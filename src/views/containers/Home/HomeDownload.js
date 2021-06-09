@@ -1,17 +1,14 @@
 import AppBgSvg from "../../../media/svgs/AppBgSvg"
-import PlayStoreSvg from "../../../media/svgs/PlayStoreSvg"
-import AppStoreSvg from "../../../media/svgs/AppStoreSvg"
-import Picture from "../../components/Picture"
-import bazaar from "../../../media/images/bazaar.png"
 import ScrollY from "../../../helpers/ScrollY"
 import {useRef} from "react"
 import MobileFrame from "../../../media/svgs/MobileFrame"
-import intro1 from "../../../media/images/intro1.png"
-import intro2 from "../../../media/images/intro2.png"
-import intro3 from "../../../media/images/intro3.png"
-import intro4 from "../../../media/images/intro4.png"
+import intro1 from "../../../media/images/intro1.jpg"
+import intro2 from "../../../media/images/intro2.jpg"
+import intro3 from "../../../media/images/intro3.jpg"
+import intro4 from "../../../media/images/intro4.jpg"
 import Resize from "../../../helpers/Resize"
 import GuideBgSvg from "../../../media/svgs/GuideBgSvg"
+import Material from "../../components/Material"
 
 function HomeDownload()
 {
@@ -116,9 +113,19 @@ function HomeDownload()
                     <div className="home-download-app-title">همین حالا اپلیکیشن بومینو رو نصب کنید</div>
                     <div className="home-download-app-desc">استفاده از بومینو کاملا رایگانه</div>
                     <div className="home-download-app-store">
-                        <PlayStoreSvg className="home-download-app-store-svg"/>
-                        <AppStoreSvg className="home-download-app-store-svg"/>
-                        <Picture className="home-download-app-store-svg last-child" src={bazaar} alt="" srcSet={null}/>
+                        {/*<PlayStoreSvg className="home-download-app-store-svg"/>*/}
+                        {/*<AppStoreSvg className="home-download-app-store-svg"/>*/}
+                        {/*<Picture className="home-download-app-store-svg last-child" src={bazaar} alt="" srcSet={null}/>*/}
+                        <div className="home-download-app-btn ios">
+                            <Material className="home-download-app-btn-material">دانلود نسخه iOS</Material>
+                            <div className="header-right-logo-test hide hide-mobile">
+                                <div className="header-right-logo-test-triangle"/>
+                                <div className="header-right-logo-test-text">به زودی...</div>
+                            </div>
+                        </div>
+                        <a className="home-download-app-btn android" href={process.env.REACT_APP_APK_LINK} download>
+                            <Material className="home-download-app-btn-material">دانلود مستقیم نسخه اندروید</Material>
+                        </a>
                     </div>
                 </div>
             </div>

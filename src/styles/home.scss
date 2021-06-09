@@ -373,6 +373,9 @@
 .home-download-app {
   @media screen and (min-width: 480px) {
     position: sticky;
+    &.inactive {
+      pointer-events: none;
+    }
   }
   padding: 0 50px 50px 50px;
   margin: 250px var(--desktop-grid-padding) 100px var(--desktop-grid-padding);
@@ -389,10 +392,6 @@
     flex-wrap: wrap;
     padding: 0;
     background-color: var(--second-background-color);
-  }
-
-  &.inactive {
-    pointer-events: none;
   }
 }
 
@@ -567,6 +566,62 @@
   @media screen and (max-width: 480px) {
     flex-wrap: wrap;
   }
+}
+
+.home-download-app-btn {
+  position: relative;
+  width: 230px;
+  border-radius: var(--first-radius);
+  color: var(--background-color);
+  font-weight: bold;
+
+  &.android {
+    background-color: var(--text-color);
+    margin-right: 15px;
+  }
+
+  &.ios {
+    background-color: var(--disable-color);
+    margin-left: 15px;
+
+    &:hover {
+      .header-right-logo-test {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+        top: 110%;
+        z-index: 1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 170px;
+    &.android {
+      margin-right: 5px;
+    }
+    &.ios {
+      margin-left: 5px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    &.ios {
+      margin: 5px 25px;
+    }
+    &.android {
+      margin: 15px 25px 30px 25px;
+    }
+  }
+}
+
+.home-download-app-btn-material {
+  padding: 15px 0;
+  border-radius: var(--first-radius);
 }
 
 .home-download-app-store-svg {
