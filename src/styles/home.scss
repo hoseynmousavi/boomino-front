@@ -222,6 +222,7 @@
   width: 120%;
   font-size: var(--title-font);
   line-height: var(--first-line-height);
+  @include justify;
 
   @media screen and (max-width: 480px) {
     width: 90%;

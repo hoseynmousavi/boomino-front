@@ -35,6 +35,7 @@ function Header(props)
     useEffect(() =>
     {
         if (showMenu) toggleMenu()
+        // eslint-disable-next-line
     }, [scrollY])
 
     return (

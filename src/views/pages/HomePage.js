@@ -32,9 +32,7 @@ function HomePage()
                     <LogoTypeSvg className="home-first-logo-type"/>
                     <div className="home-first-title">از اینجا بچه‌تونو بفرستید اینترنت!</div>
                     <div className="home-first-desc">
-                        بومینو دسترسی بچه‌ها رو به اینترنت
-                        متناسب با ردهٔ سنی اون‌ها مدیریت می‌کنه
-                        و با کلّی محتوای مناسب و جذّاب سرگرمشون می‌کنه
+                        بومینو فضای اختصاصی با کلی محتوای جذاب و سرگرم‌کننده برای بچه‌ها متناسب با ردهٔ سنی اون‌ها درست می‌کنه و هزینه‌های اینترنت پدرمادرها رو کاهش میده
                     </div>
                     <div className="home-first-desktop-section">
                         <a href={process.env.REACT_APP_APK_LINK} download>
